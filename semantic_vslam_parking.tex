@@ -395,12 +395,12 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 Autonomous indoor parking without human intervening is one of the most demanded and challenging tasks of autonomous driving system. 
 The key point to this task is real-time precise indoor localization. 
 However, most indoor parking lots are composed of monotonous texture-less scenes and thus, are hostile to traditional visual feature-based SLAM methods.
-In this paper, we proposed a noval solution of realtime indoor localization for autonomouse driving in parking lots.
-High level landmarks, the parking spaces, are extracted and enriched with labaling to avoid the instablity of low-level visual features.
-We then proposed a robust method for detecting incorrect data associations between parking spaces and further extended traditional optimization framework by dynamically evaluating and eliminating suboptimal data associations.
-Limited visual Tags are also introduced for corners where no parking space presents.
-As a result, a map of a parking lot can be established fully automatically and robustly.
-We experimented the performance of realtime localization based on the semantic map using our automonouse driving platform TiEV and the average accuracy of 0.3m tracking tracing can be achieve at a speed of 10kph.
+In this paper, we proposed a novel solution of real-time indoor localization for autonomous driving in parking lots.
+High level landmarks, the parking spaces, are extracted and enriched with labels to avoid the instability of low-level visual features.
+We then proposed a robust method for detecting incorrect data associations between parking spaces and further extended traditional optimization framework by dynamically eliminating suboptimal data associations.
+Limited visual fiducial Tags are also introduced for corners where no parking space presents.
+As a result, a semantic map of parking lot can be established fully automatically and robustly.
+We experimented the performance of real-time localization based on the map using our autonomous driving platform TiEV and the average accuracy of 0.3m tracking tracing can be achieve at a speed of 10kph.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -443,27 +443,27 @@ Indoor, ParkingLot, Semantic landmark, Robust SLAM
 % and "HIS" in caps to complete the first word.
 
 
-\IEEEPARstart{A}{utonomous} driving has made great progress in recent years, breakthrough has been made in several harsh fields, including obstacle detection, real-time motion planning and high preceision localization (mostly based on differential GNSS).
+\IEEEPARstart{A}{utonomous} driving has been witnessed great progress in recent years, breakthrough has been made in several harsh fields, including obstacle detection, real-time motion planning and high precision localization (mostly based on differential GNSS).
 Recently, testing self-driving car can already drive safely in urban and suburban areas\citep{DARPA WAYMO}. 
 However, parking in a large indoor parking lot without human interfere is still an unsolved problem.
-One critical reason is the lack of robust high precision localization mean in GNSS forbidden area such as indoor parking lots etc.
-Traditional indoor localization methods require pre-equipmented sensors, such as WiFi, bluetooth or UWB. 
-Wireless signal decays while user’s distance to signal sources increases, so a significant number of stations are needed for stability, despite of their relative low precision\citep{WIFI bluetooth UWB}. 
+One critical reason is the lack of robust high precision localization mean in these GNSS forbidden area.
+Traditional indoor localization methods require pre-equipment sensors, such as WiFi, Bluetooth or UWB. 
+Wireless signal suffers from occlusion and decays while user’s distance to signal sources increases, so a significant number of stations are needed for stability, let alone their relative low precision\citep{WIFI bluetooth UWB}. 
 Laser-based SLAM system is eligible for localization an unmanned vehicle in environments such as a factory or a warehouse\citep{REFERNCE}.
-However, these range based representation is of high data volume and is vulnerable to dynamic scenes due to the lack of abilities of scene description.
-As a result, visual SLAM built on low-cost cameras became one of the most favorable localization method.
+However, these range based representation is of high data volume and is vulnerable to dynamic scenes.
+As a result, visual SLAM (VSLAM) built on low-cost cameras became one of the most favorable localization method.
 
 %
 
-Visual SLAM (VSLAM) is known to be effective in texture-rich environment\citep{ORB}.
-Nevertheless, they can easily fail in monotone textured scene such an indoor parking lot.
-\citet{VW paking} adopted sparse feature point based SLAM method with panorama images.
-But sparse feature extracted with ?? can be unstable when the ground floor is stained with tire markings or water spots.
+VSLAM is known to be effective in texture-rich environment\citep{ORB}.
+Nevertheless, they can easily fail in monotonously textured scene such an indoor parking lot.
+\citet{VW paking} adopted sparse feature point based SLAM method with panorama images to localize a car in parking lots.
+But the extracted sparse feature can be unstable when the ground floor is stained with tire markings or water spots.
 The distortion presented in the stitched panorama images can also disturb the feature extraction.
 Recently, \citet{Horizon DSO} employ DSO method with forward looking camera for mapping and localization in indoor parking lot.
-The direct methods estimate camera poses directly based on photometric error derived from whole images, thus are more robust than sparse methods in ?? area \citep{}.
-However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in dimmed unevenly illuminated indoor space\citep{}. 
-Moreover, the re-localization based on previously build dense map is not trivial (to verify).
+The direct methods estimate camera poses directly based on photometric error derived from the whole image, thus are more robust than sparse methods in ?? area \citep{}.
+However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in unevenly illuminated indoor parking lot\citep{}. 
+Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
 Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
 
 %
