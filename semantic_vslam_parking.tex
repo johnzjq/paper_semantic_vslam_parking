@@ -488,15 +488,22 @@ Finally, a two dimensional map of parking spaces can be robustly established whi
 Our system is implemented on an autonomous driving vehicle and tested in real parking lots.
 
 \section{Related works}
-Simultaneous localization and mapping(SLAM) has long been a heated topic in the computer vision field. 
-Going through classical age and algorithmic-analysis age \cite{Cadena:2016fp} \cite{Bailey2006Simultaneous}, now the association of metric and semantic map and the system performance in specific environment are the main focus in SLAM field. 
-	
-Monocular SLAM methods generally fall into two groups, feature-based methods and direct methods. 
+%brief review of SLAM
+SLAM has long been a classic topic in the robotics field and recently became heated in the autonomous driving\citep{}. 
+\citet{Davison2003Real} \citet{Davison2007MonoSLAM} and \citet{Civera20101} use Extended Kalman Filter(EKF) to simultaneously optimize the sensor and landmarks positions in real-time. 
+These methods modeled the optimization problem as a Markov Chain, thus can provided promising localization results with high efficiency.
+However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
+Probability filters have many further extensions such as UKF \citep{}, Information filter\citep{}, particle filter\citep{} etc.
+However, they all assume the conditional independence of the current measurement with the historical states, which restricts the SLAM into a predict-update iteration loop.
+Inspired by the bundle adjustment research \citep{}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{}.
+Its flexibility enable the Graph SLAM became the most popular SLAM method.  
+
+% Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
+% Going through classical age and algorithmic-analysis age \cite{Cadena:2016fp} \cite{Bailey2006Simultaneous}, now the association of metric and semantic map and the system performance in specific environment are the main focus in SLAM field. 
+% review of VSLAM
+Generally VSLAM methods fall into two groups, so called feature-based methods (the indirect methods) and direct methods. 
 In feature-based methods, low-level features are detected and treated as landmarks. 
-\cite{Davison2003Real} \cite{Davison2007MonoSLAM} and \cite{Civera20101} use Extended Kalman Filter(EKF) to optimize the sensor and landmarks positions constantly. 
-These methods provides promising localization results with high efficiency. 
-However, the computation grows quadratically with the number of landmark\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains. 
-Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
+
 The first Graph SLAM is PTAM\cite{Klein2007Parallel}, who is the first to separate tracking and mapping into two tasks, but still works in small areas(a desk or a room corner). 
 After that, graph-based methods blooms.\cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework. 
 Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers a more stable and efficient graph-based SLAM system. 
@@ -508,12 +515,17 @@ But direct methods require high frame rate since short baselines are needed to e
 SVO \cite{Forster2013SVO} combines feature-based method and direct method, and runs quite fast(100 Hz). 
 However, lacking of loop closure detection, SVO drifts as time increases and gets lost easily.
 	
+% Review of Semantic slam
+
 Semantic SLAM associates the semantic understanding with the geometric entities in the surroundings \cite{Cadena:2016fp}. \cite{Li2016Semi} adds semantic labels to a LSD-SLAM framework, but semantic labels helps little in the localization stage. 
 SLAM++ \cite{Salas2013SLAM} and Semantic Fusion \cite{Mccormac2017SemanticFusion} do semantic SLAM based on RGBD SLAM framework, and the semantic label aids the loop closure. 
 However, both methods are only tested in room-sized domains. Semantic labels under specific environments also aroused attention. 
 In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in large indoor shopping spaces. 
 \cite{Houben:2015hq} detects parking lots from the top view image, and use detected lots to estimate camera poses. 
 \cite{Grimmett2015Integrating} and \cite{Himstedt2017Online} reconstruct the metric map and the semantic map of parking lot, which helps the route planning and parking task.
+
+% conclusion of the review part
+
 
 \section{approach}
 
