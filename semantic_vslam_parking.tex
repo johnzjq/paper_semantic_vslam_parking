@@ -392,12 +392,20 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-Autonomous indoor parking without human intervening is one of the most demanded and challenging tasks of autonomous driving system. The key point to this task is real-time precise indoor localization. However, most parking lots contain limited features and thus, is hostile to traditional vision-only localization methods. In this paper, we propose an alternative solution for indoor localization in parking spaces. High level landmarks are introduced to avoid the limitations of traditional methods. We choose parking-lot, which act as an aid for the later parking task, as well as visual markers representing pillar walls to achieve the robust performance. To meet both human and machine’s demands, a 2 dimensional map is established in the offline part other than the traditional point-cloud map. During the online process, our map is updated simultaneously and tends to stabilize. Real time experiment on our test vehicle shows that our method meets the practical demands, and perform better in parking lots than other state-of-art methods.
+Autonomous indoor parking without human intervening is one of the most demanded and challenging tasks of autonomous driving system. 
+The key point to this task is real-time precise indoor localization. 
+However, most indoor parking lots are composed of monotonous texture-less scenes and thus, are hostile to traditional visual feature-based SLAM methods.
+In this paper, we proposed a novel solution of real-time indoor localization for autonomous driving in parking lots.
+High level landmarks, the parking spaces, are extracted and enriched with labels to avoid the instability of low-level visual features.
+We then proposed a robust method for detecting incorrect data associations between parking spaces and further extended traditional optimization framework by dynamically eliminating suboptimal data associations.
+Limited visual fiducial Tags are also introduced for corners where no parking space presents.
+As a result, a semantic map of parking lot can be established fully automatically and robustly.
+We experimented the performance of real-time localization based on the map using our autonomous driving platform TiEV and the average accuracy of 0.3m tracking tracing can be achieve at a speed of 10kph.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Indoor, lot detection, AprilTag, Graph Optimize, SLAM.
+Indoor, ParkingLot, Semantic landmark, Robust SLAM
 \end{IEEEkeywords}
 
 
@@ -435,39 +443,67 @@ Indoor, lot detection, AprilTag, Graph Optimize, SLAM.
 % and "HIS" in caps to complete the first word.
 
 
-\IEEEPARstart{A}{utonomous} driving has made great progress in recent years, breakthrough has been made in several harsh fields, including motion planning real-time localization and obstacle detection. Self driving car with multi sensors can perform well in urban areas. 
-However, indoor parking without human interfere is still an unsolved question. Traditional indoor navigation methods require many pre-equipment sensors.
-WiFi and bluetooth signal decays while user’s distance to signal sources increases, so a significant number of stations are needed for stability. 
-However, visual SLAM only need low-cost cameras and works well in most situations. 
-Therefore, vision sensor is now a favor to car manufacturers. 
+\IEEEPARstart{A}{utonomous} driving has been witnessed great progress in recent years, breakthrough has been made in several harsh fields, including obstacle detection, real-time motion planning and high precision localization (mostly based on differential GNSS).
+Recently, testing self-driving car can already drive safely in urban and suburban areas\citep{DARPA WAYMO}. 
+However, parking in a large indoor parking lot without human interfere is still an unsolved problem.
+One critical reason is the lack of robust high precision localization mean in these GNSS forbidden area.
+Traditional indoor localization methods require pre-equipment sensors, such as WiFi, Bluetooth or UWB. 
+Wireless signal suffers from occlusion and decays while user’s distance to signal sources increases, so a significant number of stations are needed for stability, let alone their relative low precision\citep{WIFI bluetooth UWB}. 
+Laser-based SLAM system is eligible for localization an unmanned vehicle in environments such as a factory or a warehouse\citep{REFERNCE}.
+However, these range based representation is of high data volume and is vulnerable to dynamic scenes.
+As a result, visual SLAM (VSLAM) built on low-cost cameras became one of the most favorable localization method.
 
-However, visual SLAM is still immature. 
-Many SLAM methods have their own scopes and may “lose control”(stop working or work unsteadily) in specific places, parking lots, shopping malls and etc. 
-Traditional visual localization methods\citep{Klein2007Parallel} \cite{Mur2017ORB} develop from structure from motion \cite{Hartley2003Multiple}, who aims to recover the 3D scenes from dozens of photos without human interfere. 
-These methods focus on scene reconstruction, and need rich textures for feature detection, so they always fail in low-texture environments such as lot spaces. 
-Recently, direct method has raised general interests. 
-Direct method estimates camera poses directly from images rather than extracts features. 
-Direct methods often require high frame rate \cite{Newcombe2011DTAM}\cite{Forster2013SVO} and are susceptible to global illumination change\cite{Newcombe2011DTAM}\cite{Engel2014LSD}, so they are often limited to room-sized domains\cite{Newcombe2011DTAM}\cite{Whelan2015ElasticFusion} and are likely to lose in the map\cite{Forster2013SVO}\cite{Engel2014LSD}. 
-As the research on machine learning and pattern recognition develops, visual SLAM with semantic labels\cite{Uhl2011From}\cite{Salas2013SLAM} \cite{Mccormac2017SemanticFusion} emerges. 
-These solutions use machine learning approaches to collect semantic information from image patches, and label the output maps. 
-However, most semantic labels helps little in localization stage, while the image segmentation and classification work cost much time. 
-The full use of semantic information is still a unsolved problem.
+%
+
+VSLAM is known to be effective in texture-rich environment\citep{ORB}.
+Nevertheless, they can easily fail in monotonously textured scene such an indoor parking lot.
+\citet{VW paking} adopted sparse feature point based SLAM method with panorama images to localize a car in parking lots.
+But the extracted sparse feature can be unstable when the ground floor is stained with tire markings or water spots.
+The distortion presented in the stitched panorama images can also disturb the feature extraction.
+Recently, \citet{Horizon DSO} employ DSO method with forward looking camera for mapping and localization in indoor parking lot.
+The direct methods estimate camera poses directly based on photometric error derived from the whole image, thus are more robust than sparse methods in ?? area \citep{}.
+However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in unevenly illuminated indoor parking lot\citep{}. 
+Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
+Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
+
+%
+
+% Traditional visual localization methods\citep{Klein2007Parallel} \cite{Mur2017ORB} develop from structure from motion \cite{Hartley2003Multiple}, who aims to recover the 3D scenes from dozens of photos without human interfere.`' 
+% These methods focus on scene reconstruction, and need rich textures for feature detection, so they always fail in low-texture environments such as lot spaces. 
+% Recently, direct method has raised general interests. 
+% Direct method estimates camera poses directly from images rather than extracts features. 
+% Direct methods often require high frame rate \cite{Newcombe2011DTAM}\cite{Forster2013SVO} and are susceptible to global illumination change\cite{Newcombe2011DTAM}\cite{Engel2014LSD}, so they are often limited to room-sized domains\cite{Newcombe2011DTAM}\cite{Whelan2015ElasticFusion} and are likely to lose in the map\cite{Forster2013SVO}\cite{Engel2014LSD}. 
+% As the research on machine learning develops, visual SLAM with semantic labels\cite{Uhl2011From}\cite{Salas2013SLAM} \cite{Mccormac2017SemanticFusion} emerges. 
+% These solutions use machine learning approaches to collect semantic information from image patches, and label the output maps. 
+% However, most semantic labels helps little in localization stage, while the image segmentation and classification work cost much time. 
+% The full use of semantic information is still a unsolved problem.
 	
-As a typical kind of semantic landmarks in parking spaces, parking-lots is now a favour for researchers.
-\citep{Houben:2015hq} \citep{Grimmett2015Integrating} \citep{Himstedt2017Online} Inspired by these methods, We present a mapping and localization system based on the robust recognition of high level landmarks for parking, i.e. parking-lots and visual markers representing pillar-wall. 
-In our method, a two dimensional parking map is established other than the traditional point-cloud map for its stability, directness and light weight.
-The method is tested in real parking lot spaces, and proved to meet the real time usage.
+As a typical kind of semantic landmarks in parking lots, parking-space is now a favour for researchers
+\citep{Houben:2015hq} \citep{Grimmett2015Integrating} \citep{Himstedt2017Online}.
+Recently, deep learning-based method show its capability of  accurate and robust detection of such kind of meaningful objects \citep{zhanglin}. 
+Inspired by these methods, we present an robust VSLAM system based on the recognition of high level landmarks for parking, i.e. parking-spaces and their IDs. 
+Limited visual fiducial markers are introduced for facilitating corning when no parking space exists. 
+Facing the visual aliasing problem of parking spaces, we proposed a robust outliers detection and elimination strategy in the optimization stage.
+Finally, a two dimensional map of parking spaces can be robustly established which is distinguished from the traditional feature-based or point-cloud map for its stability, re-usability, light weight and human readable.
+Our system is implemented on an autonomous driving vehicle and tested in real parking lots.
 
 \section{Related works}
-Simultaneous localization and mapping(SLAM) has long been a heated topic in the computer vision field. 
-Going through classical age and algorithmic-analysis age \cite{Cadena:2016fp} \cite{Bailey2006Simultaneous}, now the association of metric and semantic map and the system performance in specific environment are the main focus in SLAM field. 
-	
-Monocular SLAM methods generally fall into two groups, feature-based methods and direct methods. 
+%brief review of SLAM
+SLAM has long been a classic topic in the robotics field and recently became heated in the autonomous driving\citep{}. 
+\citet{Davison2003Real} \citet{Davison2007MonoSLAM} and \citet{Civera20101} use Extended Kalman Filter(EKF) to simultaneously optimize the sensor and landmarks positions in real-time. 
+These methods modeled the optimization problem as a Markov Chain, thus can provided promising localization results with high efficiency.
+However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
+Probability filters have many further extensions such as UKF \citep{}, Information filter\citep{}, particle filter\citep{} etc.
+However, they all assume the conditional independence of the current measurement with the historical states, which restricts the SLAM into a predict-update iteration loop.
+Inspired by the bundle adjustment research \citep{}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{}.
+Its flexibility enable the Graph SLAM became the most popular SLAM method.  
+
+% Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
+% Going through classical age and algorithmic-analysis age \cite{Cadena:2016fp} \cite{Bailey2006Simultaneous}, now the association of metric and semantic map and the system performance in specific environment are the main focus in SLAM field. 
+% review of VSLAM
+Generally VSLAM methods fall into two groups, so called feature-based methods (the indirect methods) and direct methods. 
 In feature-based methods, low-level features are detected and treated as landmarks. 
-\cite{Davison2003Real} \cite{Davison2007MonoSLAM} and \cite{Civera20101} use Extended Kalman Filter(EKF) to optimize the sensor and landmarks positions constantly. 
-These methods provides promising localization results with high efficiency. 
-However, the computation grows quadratically with the number of landmark\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains. 
-Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
+
 The first Graph SLAM is PTAM\cite{Klein2007Parallel}, who is the first to separate tracking and mapping into two tasks, but still works in small areas(a desk or a room corner). 
 After that, graph-based methods blooms.\cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework. 
 Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers a more stable and efficient graph-based SLAM system. 
@@ -479,12 +515,17 @@ But direct methods require high frame rate since short baselines are needed to e
 SVO \cite{Forster2013SVO} combines feature-based method and direct method, and runs quite fast(100 Hz). 
 However, lacking of loop closure detection, SVO drifts as time increases and gets lost easily.
 	
+% Review of Semantic slam
+
 Semantic SLAM associates the semantic understanding with the geometric entities in the surroundings \cite{Cadena:2016fp}. \cite{Li2016Semi} adds semantic labels to a LSD-SLAM framework, but semantic labels helps little in the localization stage. 
 SLAM++ \cite{Salas2013SLAM} and Semantic Fusion \cite{Mccormac2017SemanticFusion} do semantic SLAM based on RGBD SLAM framework, and the semantic label aids the loop closure. 
 However, both methods are only tested in room-sized domains. Semantic labels under specific environments also aroused attention. 
 In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in large indoor shopping spaces. 
 \cite{Houben:2015hq} detects parking lots from the top view image, and use detected lots to estimate camera poses. 
 \cite{Grimmett2015Integrating} and \cite{Himstedt2017Online} reconstruct the metric map and the semantic map of parking lot, which helps the route planning and parking task.
+
+% conclusion of the review part
+
 
 \section{approach}
 
