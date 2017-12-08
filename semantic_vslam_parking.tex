@@ -11,7 +11,7 @@
 \newcommand{\Refsec}[1]{Sec.~\ref{#1}}
 \newcommand{\Reftab}[1]{Tab.~\ref{#1}}
 %
-% If IEEEtran.cls has not been installed into the LaTeX system files,
+% If IEEEtran.cls has not been installed in to the LaTeX system files,
 % manually specify the path to it like:
 % \documentclass[journal]{../sty/IEEEtran}
 
@@ -680,12 +680,12 @@ A null hypothesis is quite effective even with a extremely small weight.\cite{Pf
 This method works well in pose graphs\cite{Latif2014Robust}\cite{Sunderhauf2013Switchable}\cite{Cadena:2016fp}, and we will prove its effectiveness in landmark association in the experiment section.
 
 Since there is no wrongly associated data in IMU and tag observations, they are considered as robust edges in the graph, while the parking lot observations are always with high uncertainty, and several steps are added to guarantee the robustness. 
-Once parking lots are detected, they are reexamined using some prior knowledge. 
+Once parking lots are detected, they are re-examined using some prior knowledge. 
 Unusual lots(too small, too large or with abnormal length-width ratio) will thus be discarded. 
-The rest lots are classified by the confidence level of lot IDs. Lot observations with high confidence IDs are added to the graph as max-mixture edges with null hypothesis. 
+The rest lots are classified by the confidence level of lot IDs. Lot observations with high confidence IDs are added to the graph as Max-Mixture edges with null hypothesis. 
 Due to the existence of false positive IDs with high confidence, a null hypothesis indicating the wrong edge association is essential. 
-The location of lot observations with low confidence IDs and without ID are matched with all the excited lot landmarks by nearest neighbor method. 
-As several candidate lots are detected, these candidate lot association together with the original association obtained by lot detection are add to the graph as a max-mixture edge with multi hypothesis. 
+The location of lot observations with low confidence IDs and without ID are matched with all the excited lot landmarks by nearest neighbour method. 
+As several candidate lots are detected, these candidate lot association together with the original association obtained by lot detection are add to the graph as a Max-Mixture edge with multi hypothesis. 
 If no candidate detected, the lot observation will be pushed into the temporary landmark pool. 
 In case the certain number(M) of same landmark is collected in the pool, the M observations are added to the graph as a max-mixture edge with multi hypothesis. 
 The best car lot association will be selected as the initial landmark observation. Information matrix of landmark edges are shifted according to their detection confidence level.
@@ -737,22 +737,85 @@ The connection between the vehicle at each time stamp and the landmarks.
 
 \section{Experiments}
 In this section, we test our method both online and offline, and discuss several questions about the usage of visual markers. 
-In the online part, our system is tested on Roewe E50 in a parking lot in Tongji University.
-Experiment draft
+All the parking lot datasets are collected by Roewe E50 in Jiading Campus of Tongji University.
 
-describe the experiment environment
-where we test
-how much visual markers we have used
-how big our visual markers are the choose of visibility distance 
-describe the online mapping and localization result(with tag)
-the system speed
-the localization result shown as a trace
-the localization result using a control system
-describe the offline mapping result(with tag)
-the G2O parameters
-the impact of loop closure
-describe the offline mapping result with multi level of tags
-show result with multi level of tags
+\subsection{Online real-time mapping and localization}
+During the online part, the vehicle is first operated by human to initialize the parking map. 
+Once the map stabilizes, a car trace is recorded.
+Then the vehicle drives automatically at the speed of 3 km/h following this pre-recorded trace and fixes its direction constantly according to real-time localization record.
+The automatic driving procedure is repeated 10 times, automatic driving traces are also recorded and compared to the pre-recorded one.
+Fig 11 shows the traces of both manual and automatic driving trace.
+Quite a number of visual markers(60 tags) are used to cover the lot-free parts near the entrance and to guarantee a fully stable and credible localization result.
+Each tag is printed on a A2-size paper with 48.8 cm side length.
+While observing, those tags who are 20 meters or farther than the vehicle are discarded since the accuracy decreases as tags become smaller in the image.
+However, observations with dip-angle are reliable constraints as long as they are within 20 meters.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+The dip-angle doesn't affect the accuracy while the distance makes great influence.%想用立体的效果来表示，不知道该如何表示？
+}\label{fig:10}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+A comparison between the human-driving and automatic driving trace%这个数据是否可以再采集一次？
+}\label{fig:11}
+\end{figure}
+
+\subsection{Offline mapping test}
+As to the offline part, several datasets with different starting points are collected. 
+Each dataset is processed independently.
+The covariance of each edge shifts from 0.1 to 0.25 according to its confidence level.
+Fig 12 shows the map result for two of these datasets.
+Map blocks with more tags have higher precision as tags are ideal landmarks who will never be wrongly associated.
+The low detection rate of parking ID also affects the mapping result, as shown in fig 13.
+
+\begin{figure*}
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+toDo%有tag的建好的图，标出无tag部分，loop closure前后的图，共四个
+}\label{fig:12}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+toDo%有tag的parking ID经过调整和未经过调整的图，两对，共四个
+}\label{fig:13}
+\end{figure*}
+
+In one dataset, there is a no-tag map block (marked in fig 12), where wrongly associated data always occurs.
+However, once a loop is detected, all landmark-positions are corrected.
+Then, duplicate landmarks are merged.
+
+\subsection{How many tag is needed?}
+
+As described in the previous section, tags are ideal landmarks promising a robust localization and mapping result.
+In this part, we discuss which tags are indispensable while others are not a must.
+
+We think several factors may affect the importance of each tag: the visibility rate, the distribution and the distance to the nearest rate.
+Considering the factors above, we make several tag combinations and test their performance.
+The final result is shown in fig 14, both visibility and distribution play an important role.
+The crucial tags should be separated in the lot, and have a good visibility rate.
+In our parking lot case, at least 3 tags are needed, while 10 evenly distributed tags offer the best result.
+
+\begin{figure*}
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+toDo%tag数量和分布不同的图
+}\label{fig:14}
+\end{figure*}
+
+$\\
+\\$
+
 a statistic result of the rightly located lots in each graph
 give the  tag position solution based on the visibility of cameras
 based on visibility of the front camera(put tags at where there are multi visibility)
