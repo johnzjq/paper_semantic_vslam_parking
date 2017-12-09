@@ -496,17 +496,20 @@ However, the computation grows quadratically with the number of landmarks\cite{B
 Probability filters have many further extensions such as UKF \citep{}, Information filter\citep{}, particle filter\citep{} etc.
 However, they all assume the conditional independence of the current measurement with the historical states, which restricts the SLAM into a predict-update iteration loop.
 Inspired by the bundle adjustment research \citep{}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{}.
-Its flexibility enable the Graph SLAM became the most popular SLAM method.  
+The graph-based optimization method is closely related to a Markov random field model, thus can involve the influence of all historical measurements, which together with its flexibility enable the Graph SLAM became the most popular SLAM method\citep{why filters}.  
 
 % Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
 % Going through classical age and algorithmic-analysis age \cite{Cadena:2016fp} \cite{Bailey2006Simultaneous}, now the association of metric and semantic map and the system performance in specific environment are the main focus in SLAM field. 
+
 % review of VSLAM
 Generally VSLAM methods fall into two groups, so called feature-based methods (the indirect methods) and direct methods. 
 In feature-based methods, low-level features are detected and treated as landmarks. 
+To prevent integrating all the features (should use the expression from PTAM), PTAM\cite{Klein2007Parallel} separates tracking and mapping into two tasks, but still works in small areas(a desk or a room corner). 
+\cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework\citep{K2011G2o}. 
+Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers a more stable and efficient graph-based SLAM system.
 
-The first Graph SLAM is PTAM\cite{Klein2007Parallel}, who is the first to separate tracking and mapping into two tasks, but still works in small areas(a desk or a room corner). 
-After that, graph-based methods blooms.\cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework. 
-Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers a more stable and efficient graph-based SLAM system. 
+
+%TODO 
 With the keyframe and the loop closure detection, ORB-SLAM performs well in multi-scale environments. 
 Since it’s a feature-based method, ORB-SLAM is still easy to get lost in less or non-textured environments. 
 Direct methods use all the image pixels to build a dense point cloud. 
