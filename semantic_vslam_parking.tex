@@ -518,21 +518,30 @@ Comparing to sparse feature-based methods, direct methods can output a semi-dens
 But in practice, direct methods require high rate of overlapping between consequent frames and high frame rate is also necessity since (to be filled) to estimate the depth accurately.
 Direct methods are also known to be vulnerable to motion blur, camera defocus and global illumination changes \cite{Newcombe2011DTAM}. 
 SVO \cite{Forster2013SVO} and DSVO\cite{} combine advantages of feature-based method and direct method, and runs extremely fast (100 Hz). 
-However, lacking of loop closure detection, these odometry methods drifts as time increases and gets lost easily.
+However, lacking of loop closure detection, these odometric methods drifts as time increases and gets lost easily.
 	
 % Review of Semantic slam
 %TODO
 
-Semantic SLAM associates the semantic understanding with the geometric entities in the surroundings \cite{Cadena:2016fp}. \cite{Li2016Semi} adds semantic labels to a LSD-SLAM framework, but semantic labels helps little in the localization stage. 
-SLAM++ \cite{Salas2013SLAM} and Semantic Fusion \cite{Mccormac2017SemanticFusion} do semantic SLAM based on RGBD SLAM framework, and the semantic label aids the loop closure. 
-However, both methods are only tested in room-sized domains. Semantic labels under specific environments also aroused attention. 
+Traditional SLAM methods do not incorporate human understandable meanings (semantics) associated with landmarks into the method, which now is recognized to be crucial for construct a human readable map and strengthen the descriptive power of landmarks\citep{}.
+\cite{Cadena:2016fp}. \cite{Li2016Semi} added semantic labels to a LSD-SLAM framework to construct a dense map with classes attached to geometric entities, but semantic labels helps little in the optimization or localization stages.
+SLAM++ \cite{Salas2013SLAM} and Semantic Fusion \cite{Mccormac2017SemanticFusion} employed semantic labels in the RGBD SLAM framework to aid the loop closure. 
+However, both methods...
+
+(!!should be very clear about the defects of these methods, i.e. 3D objects? not precise regarding to the localization of objects? can be confusing when multiple objects are searched?})
+
 In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in large indoor shopping spaces. 
-\cite{Houben:2015hq} detects parking lots from the top view image, and use detected lots to estimate camera poses. 
+\cite{Houben:2015hq} detects parking lots from the (fixed?) top view image, and use detected lots to estimate camera poses (is this a slam?).
+
 \cite{Grimmett2015Integrating} and \cite{Himstedt2017Online} reconstruct the metric map and the semantic map of parking lot, which helps the route planning and parking task.
+(!!semantics in VW paper(2015) is not used in SLAM at all, not sure about the second one )
 
 % conclusion of the review part
+In a short conclusion, existing VSLAM methods generally could not perform robustly in texture-less area like an indoor parking lot.
+Therefore, more descriptive landmarks, especially landmarks attached with semantics should be used instead of low level feature in such a scenario.
+%not a good conclusion, i will revise the state of the art later.
 
-
+%todo
 \section{approach}
 
 Our vision-only localization and mapping system includes four fisheye cameras and a monocular camera. 
