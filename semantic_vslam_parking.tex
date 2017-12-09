@@ -504,21 +504,24 @@ The graph-based optimization method is closely related to a Markov random field 
 % review of VSLAM
 Generally VSLAM methods fall into two groups, so called feature-based methods (the indirect methods) and direct methods. 
 In feature-based methods, low-level features are detected and treated as landmarks. 
-To prevent integrating all the features (should use the expression from PTAM), PTAM\cite{Klein2007Parallel} separates tracking and mapping into two tasks, but still works in small areas(a desk or a room corner). 
+To prevent integrating all the features into the factor graph(John:should use correct expression from PTAM), PTAM\cite{Klein2007Parallel} separates tracking and mapping into two sub-tasks, keyframes are extracted and used in optimization, but because of what?? it still works in small areas(a desk or a room corner). 
 \cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework\citep{K2011G2o}. 
-Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers a more stable and efficient graph-based SLAM system.
+Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers stable and efficient graph-based VSLAM system.
+With the keyframe detection and the BoW-empowered fast loop closure detection, ORB-SLAM performs well in various indoor and outdoor environments. 
+However, ORB-SLAM is still easy to fail in texture-less environments.
 
+%
 
-%TODO 
-With the keyframe and the loop closure detection, ORB-SLAM performs well in multi-scale environments. 
-Since it’s a feature-based method, ORB-SLAM is still easy to get lost in less or non-textured environments. 
-Direct methods use all the image pixels to build a dense point cloud. 
-Comparing to feature-based methods, direct methods output a semi-dense point cloud with higher quality at a real time speed. 
-But direct methods require high frame rate since short baselines are needed to estimate the depth accurately \cite{Engel2014LSD} and are not robust to motion blur, camera defocus and global illumination changes \cite{Newcombe2011DTAM}. 
-SVO \cite{Forster2013SVO} combines feature-based method and direct method, and runs quite fast(100 Hz). 
-However, lacking of loop closure detection, SVO drifts as time increases and gets lost easily.
+Because feature-based methods are only capable of creating sparse feature-based mapping, they cannot be directly used in applications where full reconstruction is demanded, e.g. AR or structure from motion.
+Direct methods based on photometric error and utilize all image pixels are proposed \citep{Engel2014LSD}.
+Comparing to sparse feature-based methods, direct methods can output a semi-dense point cloud with higher quality at a real time speed. 
+But in practice, direct methods require high rate of overlapping between consequent frames and high frame rate is also necessity since (to be filled) to estimate the depth accurately.
+Direct methods are also known to be vulnerable to motion blur, camera defocus and global illumination changes \cite{Newcombe2011DTAM}. 
+SVO \cite{Forster2013SVO} and DSVO\cite{} combine advantages of feature-based method and direct method, and runs extremely fast (100 Hz). 
+However, lacking of loop closure detection, these odometry methods drifts as time increases and gets lost easily.
 	
 % Review of Semantic slam
+%TODO
 
 Semantic SLAM associates the semantic understanding with the geometric entities in the surroundings \cite{Cadena:2016fp}. \cite{Li2016Semi} adds semantic labels to a LSD-SLAM framework, but semantic labels helps little in the localization stage. 
 SLAM++ \cite{Salas2013SLAM} and Semantic Fusion \cite{Mccormac2017SemanticFusion} do semantic SLAM based on RGBD SLAM framework, and the semantic label aids the loop closure. 
