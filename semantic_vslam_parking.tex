@@ -521,7 +521,6 @@ SVO \cite{Forster2013SVO} and DSVO\cite{} combine advantages of feature-based me
 However, lacking of loop closure detection, these odometric methods drifts as time increases and gets lost easily.
 	
 % Review of Semantic slam
-%TODO
 
 Traditional SLAM methods do not incorporate human understandable meanings (semantics) associated with landmarks into the method, which now is recognized to be crucial for construct a human readable map and strengthen the descriptive power of landmarks\citep{}.
 \cite{Cadena:2016fp}. \cite{Li2016Semi} added semantic labels to a LSD-SLAM framework to construct a dense map with classes attached to geometric entities, but semantic labels helps little in the optimization or localization stages.
@@ -540,15 +539,16 @@ In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in 
 In a short conclusion, existing VSLAM methods generally could not perform robustly in texture-less area like an indoor parking lot.
 Therefore, more descriptive landmarks, especially landmarks attached with semantics should be used instead of low level feature in such a scenario.
 %not a good conclusion, i will revise the state of the art later.
-
+%ADD review of robust methods?
 %todo
 \section{approach}
 
-Our vision-only localization and mapping system includes four fisheye cameras and a monocular camera. 
-Four fisheye cameras are fixed at two reflectors, the front engine hood and the trunk lid, which consist a surround-view system. 
-A top-view image is thus fused from the surround-view inputs. In the top-view image, who indicates ground textures, parking lots are detected. 
+Our semantic VSLAM system includes four fisheye cameras and one monocular camera. 
+Four fisheye cameras are fixed at two reflectors, and at the front and rear bumpers, which consist a surround-view system. 
+A top-view image is thus fused from the surround-view inputs after intrinsic and extrinsic calibration, as shown in \Reffig{fig:1}. 
+In the top-view image, who indicates ground textures, parking lots are detected. 
 The monocular camera is installed at the left of the real-view mirror to capture front scenes. 
-The change of steering wheel angle, as well as the vehicle speed and direction collected by IMU are also used for stability.
+The change of steering wheel angle, as well as the vehicle speed and heading direction collected by IMU are also used for stability.
 
 \begin{figure}[htbp]
 \centering
@@ -565,6 +565,8 @@ The change of steering wheel angle, as well as the vehicle speed and direction c
 }\label{fig:2}
 \end{figure*}
 
+%do we still need fiducial markers to indicate pillars?
+%TODO
 Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
 Visual markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits. 
 We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz). 
