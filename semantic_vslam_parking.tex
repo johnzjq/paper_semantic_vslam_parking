@@ -395,10 +395,11 @@ GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this %
 Autonomous indoor parking without human intervening is one of the most demanded and challenging tasks of autonomous driving system. 
 The key point to this task is real-time precise indoor localization. 
 However, most indoor parking lots are composed of monotonous texture-less scenes and thus, are hostile to traditional visual feature-based SLAM methods.
-In this paper, we proposed a novel solution of real-time indoor localization for autonomous driving in parking lots.
-High level landmarks, the parking spaces, are extracted and enriched with labels to avoid the instability of low-level visual features.
-We then proposed a robust method for detecting incorrect data associations between parking spaces and further extended traditional optimization framework by dynamically eliminating suboptimal data associations.
-Limited visual fiducial Tags are also introduced for corners where no parking space presents.
+In this paper, we proposed a novel and practical solution of real-time indoor localization for autonomous driving in parking lots.
+High level landmarks, the parking slots, are extracted and enriched with labels to avoid the instability of low-level visual features.
+We then proposed a robust method for detecting incorrect data associations between parking slots and further extended traditional optimization framework by dynamically eliminating suboptimal data associations.
+Visual fiducial Tags are also introduced to improve the overall precision.
+Their number and distribution are also analyzed and compared.
 As a result, a semantic map of parking lot can be established fully automatically and robustly.
 We experimented the performance of real-time localization based on the map using our autonomous driving platform TiEV and the average accuracy of 0.3m tracking tracing can be achieve at a speed of 10kph.
 \end{abstract}
@@ -464,7 +465,7 @@ Recently, \citet{Horizon DSO} employ DSO method with forward looking camera for 
 The direct methods estimate camera poses directly based on photometric error derived from the whole image, thus are more robust than sparse methods in ?? area \citep{}.
 However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in unevenly illuminated indoor parking lot\citep{}. 
 Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
-Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
+Therefore, more stable, legible and light weighted visual landmarks which are immune to the above shortcomings are demanded.
 
 %
 
@@ -482,9 +483,9 @@ As a typical kind of semantic landmarks in parking lots, parking-space is now a 
 \citep{Houben:2015hq} \citep{Grimmett2015Integrating} \citep{Himstedt2017Online}.
 Recently, deep learning-based method show its capability of  accurate and robust detection of such kind of meaningful objects \citep{zhanglin}. 
 Inspired by these methods, we present an robust VSLAM system based on the recognition of high level landmarks for parking, i.e. parking-spaces and their IDs. 
-Limited visual fiducial markers are introduced for facilitating corning when no parking space exists. 
-Facing the visual aliasing problem of parking spaces, we proposed a robust outliers detection and elimination strategy in the optimization stage.
-Finally, a two dimensional map of parking spaces can be robustly established which is distinguished from the traditional feature-based or point-cloud map for its stability, re-usability, light weight and human readable.
+Limited visual fiducial markers are introduced for improving overall accuracy and robustness. 
+Facing the visual aliasing problem of parking slots, we proposed a robust outliers detection and elimination strategy in the optimization stage.
+Finally, a two dimensional map of parking slots can be robustly established which is distinguished from the traditional feature-based or point-cloud map for its stability, re-usability, light weight and human readable.
 Our system is implemented on an autonomous driving vehicle and tested in real parking lots.
 
 \section{Related works}
@@ -530,7 +531,7 @@ However, both methods...
 (!!should be very clear about the defects of these methods, i.e. 3D objects? not precise regarding to the localization of objects? can be confusing when multiple objects are searched?})
 
 In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in large indoor shopping spaces. 
-\cite{Houben:2015hq} detects parking lots from the (fixed?) top view image, and use detected lots to estimate camera poses (is this a slam?).
+\cite{Houben:2015hq} detects parking lots from the (fixed IP camera?) top view image, and use detected lots to estimate camera poses (is this a slam?).
 
 \cite{Grimmett2015Integrating} and \cite{Himstedt2017Online} reconstruct the metric map and the semantic map of parking lot, which helps the route planning and parking task.
 (!!semantics in VW paper(2015) is not used in SLAM at all, not sure about the second one )
@@ -545,10 +546,10 @@ Therefore, more descriptive landmarks, especially landmarks attached with semant
 
 Our semantic VSLAM system includes four fisheye cameras and one monocular camera. 
 Four fisheye cameras are fixed at two reflectors, and at the front and rear bumpers, which consist a surround-view system. 
-A top-view image is thus fused from the surround-view inputs after intrinsic and extrinsic calibration, as shown in \Reffig{fig:1}. 
-In the top-view image, who indicates ground textures, parking lots are detected. 
-The monocular camera is installed at the left of the real-view mirror to capture front scenes. 
-The change of steering wheel angle, as well as the vehicle speed and heading direction collected by IMU are also used for stability.
+A top-view image is thus fused from the surround-view inputs after intrinsic and extrinsic calibration, as shown in \Reffig{fig:2}. 
+In the top-view image, who indicates ground textures, parking slots are detected. 
+The monocular camera is installed to the left of the real-view mirror to capture front scenes. 
+The change of steering wheel angle, as well as the vehicle speed and heading direction collected by IMU are also used in our system.
 
 \begin{figure}[htbp]
 \centering
@@ -565,22 +566,26 @@ The change of steering wheel angle, as well as the vehicle speed and heading dir
 }\label{fig:2}
 \end{figure*}
 
-%do we still need fiducial markers to indicate pillars?
+%
+
+We choose parking slot as the landmark since parking slots are the most distinguishable objects in a parking lot, and the precise locations of parking slots are informative for localization and navigation during autonomous parking.
+Our parking slot detector is based on \citep{Li2017Vision}, in which corner points of parking slots are detected and classified (\Reffig{fig:4}).
+Afterwards, parking slots are assembled according to the corner points (\Reffig{fig of parking slots assemble}).
+Although the CNN-based method is capable of detection all kinds of corner points fast and robust, the exact shape of the parking slot cannot be known due to the limited visible range of the surround vision system.
+As a result, we have to optimize the shape of the parking slots in our SLAM system.
+Furthermore, the ID of each parking slot should be detected for facilitating data association between parking slots.
+
+%
+
+Another kind of landmark used in our system is visual fiducial markers.
+% Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
+Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits (but we put the markers in the inner path of two rings?). 
+Later in the experiments, we show that fiducial markers may not be fully prohibited but their number can be limited. 
+We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz)\citep{Olson2011AprilTag}.
+% Parking lots are detected from the top-view image with the state of art CNN based parking lot recognition method \cite{Li2017Vision}. 
+% Once the four corner points are extracted, the Parking ID, which acts as an aid for the further parking task, can be determined quickly using priori knowledge.
+
 %TODO
-Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
-Visual markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits. 
-We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz). 
-Parking lots are detected from the top-view image with the state of art CNN based parking lot recognition method \cite{Li2017Vision}. 
-Once the four corner points are extracted, the Parking ID, which acts as an aid for the further parking task, can be determined quickly using priori knowledge.
-	
-
-At every time step, the relative car-landmark position, together with the speed and angular changes of vehicle should be added to the parking map incrementally. 
-In the offline stage, the popular graph optimizer G2O is used, some experimental designed rules are also introduced for outliner detection. 
-Thus, the offline part outputs a 2D parking map and an optimized vehicle trajectory. 
-During the online stage, the former parking map acts as the initial map, and is updated simultaneously with the extended Kalman filter(EKF). 
-This results in a smoother trajectory, which helps the further control task.
-
-
 \subsection{CNN based Parkinglot Recognition}
 
 Most traditional parking lot recognition methods use low-level features, such as corners and edges, which result in unstable and imprecise detections.
@@ -647,7 +652,7 @@ The resolution of the top-view image is far from satisfactory, limiting the lot 
 Most part of the surround view images are discarded, only downward parts are available. 
 And the calibration information for image fusion becomes inaccurate as time goes.
 
-Pillar-walls are part and crucial in parking spaces. 
+Pillar-walls are part and crucial in parking slots. 
 They can be used for localization, indoor structure inference and obstacle avoidance. 
 However, pillar-wall detections using image segmentation cost much time and still offer unstable results. 
 Though RGBD camera like Kinect can captures walls easily, they do cost a lot. 
@@ -688,6 +693,18 @@ The distance($d$) is the 2-norm of ${t}_{3 \times 1}$ .
 So the tag locates at $( x=sin(a) \cdot d, y=cos(a) \cdot d)$ in the vehicle relative coordinate.
 
 \subsection{Optimization}
+
+% put them here temporarly
+
+At every frame, the relative car-landmark position, together with the speed and angular changes of vehicle should be added to the parking map incrementally. 
+These values are archived from a Kalman-based extrapolater with the steering wheel, car speed and the compass readings from a cheap IMU as the input.
+During the mapping stage, the popular graph optimizer G2O is used, some experimental designed rules are also introduced for outliner detection. 
+Thus, the offline part outputs a 2D parking map and an optimized vehicle trajectory. 
+During the online stage, the former parking map acts as the initial map, and is updated simultaneously with the extended Kalman filter(EKF). 
+This results in a smoother trajectory, which helps the further control task.
+
+%
+
 
 In this section, a 2D map is built by fusing all the observation datum collected in the former sections. 
 The accumulated error of IMU may cause drifting in localization. 
@@ -881,7 +898,7 @@ be separated in the lot
 compare the solution to the statistic result
 very similar
 
-
+(john: should add Tags can be replaced by instruction arrows or parkinglot ids on the pillar, here restricted by the goal and the environment tags are required )
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.
