@@ -462,10 +462,17 @@ Nevertheless, they can easily fail in monotonously textured scene such an indoor
 But the extracted sparse feature can be unstable when the ground floor is stained with tire markings or water spots.
 The distortion presented in the stitched panorama images can also disturb the feature extraction.
 Recently, \citet{Horizon DSO} employ DSO method with forward looking camera for mapping and localization in indoor parking lot.
-The direct methods estimate camera poses directly based on photometric error derived from the whole image, thus are more robust than sparse methods in ?? area \citep{}.
-However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in unevenly illuminated indoor parking lot\citep{}. 
-Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
-Therefore, more stable, legible and light weighted visual landmarks which are immune to the above shortcomings are demanded.
+The direct methods estimate camera poses directly based on photometric error derived from the whole image, thus are more robust than sparse methods in less-textured area \citep{Engel2014LSD} \citep{Forster2013SVO}.
+% LSD:"In addition to higher accuracy and robustness in particular in environments with little keypoints, this provides sub- stantially more information about the geometry of the environment, which can be very valuable for robotics or augmented reality applications."
+%SVO:"Direct methods that exploit all the information in the image, even from areas where gradients are small, have been shown to outperform feature-based methods in terms of robustness in scenes with little texture [14] or in the case of camera- defocus and motion blur [15]."
+However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in unevenly illuminated indoor parking lot\citep{Younes2016A}. 
+%Younes2016A:Nevertheless, direct methods are susceptible to failure when scene illumination changes occur as the minimization of the photometric error be- tween two frames relies on the underlying assumption of the brightness consistency constraint 
+
+%Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
+Moreover, the performances of direct SLAM systems also depend on a good map initialization.\citep{Younes2016A}\citep{Horizon DSO}
+(John: the link between these two line are not clear; Btw, how can a dense method realized re-localization? is it trivial or is it a shortcoming for these methods?)
+%LSD & SVO:random initialization,DSO:ransac-like method, inspired by LSD
+Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
 
 %
 
