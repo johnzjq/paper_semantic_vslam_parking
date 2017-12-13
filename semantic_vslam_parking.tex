@@ -557,7 +557,7 @@ Therefore, more descriptive landmarks, especially landmarks attached with semant
 
 Our semantic VSLAM system includes four fisheye cameras and one monocular camera. 
 Four fisheye cameras are fixed at two reflectors, and at the front and rear bumpers, which consist a surround-view system. 
-A top-view image is thus fused from the surround-view inputs after intrinsic and extrinsic calibration, as shown in \Reffig{fig:2}. 
+A top-view image is then fused from the surround-view inputs after intrinsic and extrinsic calibration, as shown in \Reffig{fig:2}. 
 In the top-view image, who indicates ground textures, parking slots are detected. 
 The monocular camera is installed to the left of the real-view mirror to capture front scenes. 
 The change of steering wheel angle, as well as the vehicle speed and heading direction collected by IMU are also used in our system.
@@ -582,93 +582,104 @@ The change of steering wheel angle, as well as the vehicle speed and heading dir
 We choose parking slot as the landmark since parking slots are the most distinguishable objects in a parking lot, and the precise locations of parking slots are informative for localization and navigation during autonomous parking.
 Our parking slot detector is based on \citep{Li2017Vision}, in which corner points of parking slots are detected and classified (\Reffig{fig:4}).
 Afterwards, parking slots are assembled according to the corner points (\Reffig{fig of parking slots assemble}).
-Although the CNN-based method is capable of detection all kinds of corner points fast and robust, the exact shape of the parking slot cannot be known due to the limited visible range of the surround vision system.
-As a result, we have to optimize the shape of the parking slots in our SLAM system.
-Furthermore, the ID of each parking slot should be detected for facilitating data association between parking slots.
+Although the CNN-based method is capable of detection  most kinds of corner points fast and robust, the exact shape of the parking slot cannot be known due to the limited visible range of the surround vision system.
+As a result, the parking slot can only be guess initially and we have to optimize the shape of the parking slots in the SLAM system.
+Furthermore, the ID of each parking slot should be detected for facilitating data association between parking slots, which will be elaborated in \sec{}.
 
 %
 
 Another kind of landmark used in our system is visual fiducial markers.
 % Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
-Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits (but we put the markers in the inner path of two rings?). 
-Later in the experiments, we show that fiducial markers may not be fully prohibited but their number can be limited. 
+Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits (John:but we put the markers in the inner path of two rings?). 
+In the practice, we found that fiducial markers may not be fully prohibited but their number can be limited to a small amount. 
 We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz)\citep{Olson2011AprilTag}.
 % Parking lots are detected from the top-view image with the state of art CNN based parking lot recognition method \cite{Li2017Vision}. 
 % Once the four corner points are extracted, the Parking ID, which acts as an aid for the further parking task, can be determined quickly using priori knowledge.
 
-%TODO
-\subsection{CNN based Parkinglot Recognition}
+\subsection{CNN based Parking slot Recognition}
 
-Most traditional parking lot recognition methods use low-level features, such as corners and edges, which result in unstable and imprecise detections.
-CNN based method uses high-level features and offers stable and robust result. 
-In our system, a learning based lot detection method \cite{Li2017Vision} is applied.
+We adopt the method proposed by \citep{Li2017Vision} to detect parking slots.
 
-\begin{figure}
-\centering
-\includegraphics{pic/fig3_CNN_based_Parkinglot_Recognition}
-\caption{
-In this graph, yellow circles show the image patterns to be detected.\cite{Li2017Vision}
-}\label{fig:3}
-\end{figure}
+%
 
-First, marking-point patterns are detected by a binary classifier. 
-Marking-point pattern refers to a image patch at the intersection of two parking-lines.
-\cite{Li2017Vision} The popular AdaBoost frame work is used. 
-A boosted classifier is made up of several weak classifiers, which, in our case, are shallow decision tree. 
-Three types of feature—— the normalized intensity, the gradient magnitude and the oriented gradient histograms are used. 
-Also, the “constant soft-cascade” strategy\cite{Li2017Vision} is introduced for acceleration. 
-Since there are five kinds of marking point patterns, there are five classifiers rather than one. 
-Once a marking-point pattern is detected, it is rotated to fit the standard pattern. 
-
-\begin{figure*}
-\centering
-\includegraphics[height = 1.6in]{pic/fig4_CNN_based_Parkinglot_Recognition}
-\caption{
-Examples of marking point patterns, the red arrow indicates the direction of each patterns.\cite{Li2017Vision}
-}\label{fig:4}
-\end{figure*}
-
-Parking lots are then recognized based on the marking-point patterns. 
-In this method, the entrance-line is especially focused. 
-We use the entrance-line rule to make preliminary detections. 
-A further decision is made by conforming the preliminary detection to the parking lot model.
-
-\begin{figure}
-\centering
-\includegraphics[height = 1.5in]{pic/fig5_CNN_based_Parkinglot_Recognition}
-\caption
-    In this figure,$\overrightarrow{{P}_{1}{P}_{3}},$ $\overrightarrow{{P}_{1}{P}_{2}}$ and $\overrightarrow{{P}_{2}{P}_{3}}$ consist three lots, but $\overrightarrow{{P}_{1}{P}_{3}}$ is a false positive detection.\citep{Li2017Vision}
-\label{fig:5}
-\end{figure}
+(John: Donot repeat existing method, briefly describe the detection method and emphasize on the post processing if there is any and the ID detection)
 
 
-The final step is to remove the miss-detected entrance-line, like $\overrightarrow{{P}_{1}{P}_{3}}$in Fig 5. 
+% Most traditional parking slot recognition methods use low-level features, such as corners and edges, which result in unstable and imprecise detections.
+% CNN based method uses high-level features and offers stable and robust result. 
+% In our system, a learning based lot detection method \cite{Li2017Vision} is applied.
+
+% \begin{figure}
+% \centering
+% \includegraphics{pic/fig3_CNN_based_Parkinglot_Recognition}
+% \caption{
+% In this graph, yellow circles show the image patterns to be detected.\cite{Li2017Vision}
+% }\label{fig:3}
+% \end{figure}
+
+% First, marking-point patterns are detected by a binary classifier. 
+% Marking-point pattern refers to a image patch at the intersection of two parking-lines.
+% \cite{Li2017Vision} The popular AdaBoost frame work is used. 
+% A boosted classifier is made up of several weak classifiers, which, in our case, are shallow decision tree. 
+% Three types of feature—— the normalized intensity, the gradient magnitude and the oriented gradient histograms are used. 
+% Also, the “constant soft-cascade” strategy\cite{Li2017Vision} is introduced for acceleration. 
+% Since there are five kinds of marking point patterns, there are five classifiers rather than one. 
+% Once a marking-point pattern is detected, it is rotated to fit the standard pattern. 
+
+% \begin{figure*}
+% \centering
+% \includegraphics[height = 1.6in]{pic/fig4_CNN_based_Parkinglot_Recognition}
+% \caption{
+% Examples of marking point patterns, the red arrow indicates the direction of each patterns.\cite{Li2017Vision}
+% }\label{fig:4}
+% \end{figure*}
+
+% Parking lots are then recognized based on the marking-point patterns. 
+% In this method, the entrance-line is especially focused. 
+% We use the entrance-line rule to make preliminary detections. 
+% A further decision is made by conforming the preliminary detection to the parking lot model.
+
+% \begin{figure}
+% \centering
+% \includegraphics[height = 1.5in]{pic/fig5_CNN_based_Parkinglot_Recognition}
+% \caption
+%     In this figure,$\overrightarrow{{P}_{1}{P}_{3}},$ $\overrightarrow{{P}_{1}{P}_{2}}$ and $\overrightarrow{{P}_{2}{P}_{3}}$ consist three lots, but $\overrightarrow{{P}_{1}{P}_{3}}$ is a false positive detection.\citep{Li2017Vision}
+% \label{fig:5}
+% \end{figure}
+
+
+% The final step is to remove the miss-detected entrance-line, like $\overrightarrow{{P}_{1}{P}_{3}}$in Fig 5.
+The raw detection results from the previous method are still not precise. 
 We remove the entrance-line candidate who has more than two marking-point patterns on it to avoid this situation.  
 Once a parking-line is detected, the direction of a lot is determined as well. And the “depth” of a parking lot is known a prior knowledge. 
 	
 Since the relative car coordinate overlaps the top-view image coordinate, the lot coordinate in the top-view image is the same as that in the vehicle relative coordinate. 
-Lot IDs are also recognized basing on the priori knowledge of parking lots since IDs are always located in the center of the entrance-line. 
-We fine tuning the PVANet\cite{Hong2016PVANet} to detect IDs. 
-However, the IDs are so small on the top view image, only limited number of ID are detected, others are initially associated by Nearest Neighbor Method. 
-Finally, all the detected ID and measurement of parking lots are added to the graph as max mixture \cite{Pfingsthorn2014Representing} edges with multiple hypothesis including null hypothesis.
+
+(John: ADD how to parameterize the parking slot, if we planned to optimize the shape of a parking slot? )
+
+ID of a parking slot is important for the association of this semantic landmark.
+We fine turned PVANet to detect each character in one ID \citep{Hong2016PVANet}.
+The entrance-line of the parking slot is firstly utilized to roughly locate the ID, as shown in \Reffig(??).
+Then the image patches are extracted and send to the CNN (\Reffig(??)).
+Due to the distorted and blurred texture in the surround view image, even the latest detection network could not offer the satisfactory performance.
+As a result, we devised a semantic-based fuzzy association method to cope with the uncertainty, which will be detailed in \ref{section optimization}.  
+
+% Lot IDs are also recognized basing on the priori knowledge of parking lots since IDs are always located in the center of the entrance-line. 
+% We fine tuning the PVANet\cite{Hong2016PVANet} to detect IDs. 
+
 
 
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
 
-\subsection{Visual markers/fiducial detection and Pillar – wall inference }
+\subsection{Visual fiducial marker localization}
 
-The surround view system offers an intuitional ground observation at a high frame rate, however it has limitations. 
-The resolution of the top-view image is far from satisfactory, limiting the lot detection performance. 
-Most part of the surround view images are discarded, only downward parts are available. 
-And the calibration information for image fusion becomes inaccurate as time goes.
+The surround view system offers an intuitive ground observation at a high frame rate, however it has limitations. 
+The visibility range and resolution of the top-view image is far from satisfactory, limiting the slot detection performance. 
+% Most part of the surround view images are discarded, only downward parts are available. 
+And the calibration for image fusion becomes inaccurate as time goes, which will deteriorate the slot measurement.
 
-Pillar-walls are part and crucial in parking slots. 
-They can be used for localization, indoor structure inference and obstacle avoidance. 
-However, pillar-wall detections using image segmentation cost much time and still offer unstable results. 
-Though RGBD camera like Kinect can captures walls easily, they do cost a lot. 
-Visual markers, which present pillar-walls are introduced for its robustness and high efficiency.
-
+Recalling the goal of our robustly localization system for autonomous driving and parking in various parking lots, certain numbers of faithful landmarks such as visual fiducial markers still have to be incorporated.
 
 \begin{figure}
 \centering
@@ -676,9 +687,11 @@ Visual markers, which present pillar-walls are introduced for its robustness and
 \caption{An example of AprilTag}\label{fig:6}
 \end{figure}
 
-We use a 2D bar code style visual marker——AprilTag. 
-The detection work is completed by AprilTag C source Open Library(https://april.eecs.umich.edu/wiki/AprilTags)\cite{Olson2011AprilTag}, and the relative position between visual markers and the vehicle is solved by the PnP model \cite{Hartley2003Multiple}. 
-Every tag texture indicates a unique ID, so tag data association is always correct.
+We adopted AprilTag and employed the detection framework from the AprilTag C source Open Library \footnote{https://april.eecs.umich.edu/wiki/AprilTags}\cite{Olson2011AprilTag}.
+We further solved the relative position between visual markers and the vehicle by the PnP model in a fast and accurate way \cite{Hartley2003Multiple}. 
+
+(John: Can we improve the efficient or the accuracy when localization a tag?)
+% Every tag texture indicates a unique ID, so tag data association is always correct.
 
 \begin{figure}
 \centering
@@ -703,6 +716,18 @@ Once ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ is calculated, the Rodrigues tran
 The distance($d$) is the 2-norm of ${t}_{3 \times 1}$ . 
 So the tag locates at $( x=sin(a) \cdot d, y=cos(a) \cdot d)$ in the vehicle relative coordinate.
 
+%
+
+These visual fiducial markers are flexible and easily implemented.
+They brought another benefit for the autonomous parking purpose, that fiducial markers can easily indicate the existences of pillars and walls which can only be robustly detected by expensive laser scanners.
+These obstacle information can facilitate the route planning inside of a parking lot. 
+% Pillar-walls are part and crucial in parking slots. 
+% They can be used for localization, indoor structure inference and obstacle avoidance. 
+% However, pillar-wall detections using image segmentation cost much time and still offer unstable results. 
+% Though RGBD camera like Kinect can captures walls easily, they do cost a lot. 
+% Visual markers, which present pillar-walls are introduced for its robustness and high efficiency.
+
+%TODO
 \subsection{Optimization}
 
 % put them here temporarly
@@ -755,6 +780,12 @@ $H=\sum\limits_{k \in C}J_k^T \Omega_k J_k$;
 $\check{x}$ indicates the initial value of ${x}$. 
 $\Delta x$ is the residual between $\check{x}$  and $x^*$, and $J_k$ is the Jacobian Matrix of each $e_k$. 
 Then we can get the global optimal solution $x^*$ by solving the linear function $H\Delta x^*=-b$ and add $\Delta x^*$ to $x^*$ iteratively.
+
+
+% moved from previous paragraph
+However, the IDs are so small on the top view image, only limited number of ID are detected, others are initially associated by Nearest Neighbor Method. 
+Finally, all the detected ID and measurement of parking lots are added to the graph as max mixture \cite{Pfingsthorn2014Representing} edges with multiple hypothesis including null hypothesis.
+%
 
 \subsubsection{Max-Mixture Model}
 Max-Mixture Model \cite{Pfingsthorn2014Representing} aims to detect loop closure errors in the “back-end” part of a pose graph. 
@@ -824,6 +855,11 @@ The connection between the vehicle at each time stamp and the landmarks.
 \section{Experiments}
 In this section, we test our method both online and offline, and discuss several questions about the usage of visual markers. 
 All the parking lot datasets are collected by Roewe E50 in Jiading Campus of Tongji University.
+\subsection{Semantic landmark detection and localization}
+
+\Reffig{??} show a subset of the training samples used.
+
+
 
 \subsection{Online real-time mapping and localization}
 During the online part, the vehicle is first operated by human to initialize the parking map. 
