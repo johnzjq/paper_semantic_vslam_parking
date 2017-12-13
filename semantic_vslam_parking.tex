@@ -505,7 +505,7 @@ SLAM has long been a classic topic in the robotics field\citep{Cadena:2016fp} an
 \citet{Davison2003Real} \citet{Davison2007MonoSLAM} and \citet{Civera20101} use Extended Kalman Filter(EKF) to simultaneously optimize the sensor and landmarks positions in real-time. 
 These methods modeled the optimization problem as a Markov Chain, thus can provided promising localization results with high efficiency.
 However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
-Probability filters have many further extensions such as UKF \citep{}, Information filter\citep{}, particle filter\citep{} etc.
+Probability filters have many further extensions such as UKF \citep{martinez2005unscented}, Information filter\citep{thrun2005multi}, particle filter\citep{montemerlo2007fastslam}\citep{montemerlo2002fastslam} etc.
 However, they all assume the conditional independence of the current measurement with the historical states, which restricts the SLAM into a predict-update iteration loop.
 Inspired by the bundle adjustment research \citep{}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{}.
 The graph-based optimization method is closely related to a Markov random field model, thus can involve the influence of all historical measurements, which together with its flexibility enable the Graph SLAM became the most popular SLAM method\citep{why filters}.  
@@ -590,7 +590,9 @@ Furthermore, the ID of each parking slot should be detected for facilitating dat
 
 Another kind of landmark used in our system is visual fiducial markers.
 % Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
-Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits (John:but we put the markers in the inner path of two rings?). 
+Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits. 
+%(John:but we put the markers in the inner path of two rings?)
+Since the loop closure using only parking lots always fails, visual markers are also placed where there is a high revisiting-rate.
 In the practice, we found that fiducial markers may not be fully prohibited but their number can be limited to a small amount. 
 We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz)\citep{Olson2011AprilTag}.
 % Parking lots are detected from the top-view image with the state of art CNN based parking lot recognition method \cite{Li2017Vision}. 
@@ -655,7 +657,9 @@ Once a parking-line is detected, the direction of a lot is determined as well. A
 	
 Since the relative car coordinate overlaps the top-view image coordinate, the lot coordinate in the top-view image is the same as that in the vehicle relative coordinate. 
 
-(John: ADD how to parameterize the parking slot, if we planned to optimize the shape of a parking slot? )
+%(John: ADD how to parameterize the parking slot, if we planned to optimize the shape of a parking slot? )
+To optimize both position and shape of each parking slot, parking lot is stored as four landmark points with a rectangular constrain(expressed by edges with high confidence value).
+
 
 ID of a parking slot is important for the association of this semantic landmark.
 We fine turned PVANet to detect each character in one ID \citep{Hong2016PVANet}.
@@ -691,6 +695,7 @@ We adopted AprilTag and employed the detection framework from the AprilTag C sou
 We further solved the relative position between visual markers and the vehicle by the PnP model in a fast and accurate way \cite{Hartley2003Multiple}. 
 
 (John: Can we improve the efficient or the accuracy when localization a tag?)
+(Huang:To make the detection faster and more precise or to make the PnP or other method faster?)
 % Every tag texture indicates a unique ID, so tag data association is always correct.
 
 \begin{figure}
