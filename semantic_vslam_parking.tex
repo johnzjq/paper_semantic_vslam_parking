@@ -471,6 +471,10 @@ However, they often require high frame rate and are susceptible to global illumi
 %Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
 Moreover, the performances of direct SLAM systems also depend on a good map initialization.\citep{Younes2016A}\citep{Horizon DSO}
 (John: the link between these two line are not clear; Btw, how can a dense method realized re-localization? is it trivial or is it a shortcoming for these methods?)
+
+(Huang:In LSD SLAM，it is said that most dense method is simply a VO, while LSD has loop closure procedure. 
+However, LSD itself do not have a map read and write module, but the LSD paper and the survey(Younes2016A) didn't mention this. Also since the direct method is not robust to illumination changes, re-localization using a pre-built map is of course almost unrealistic.)
+
 %LSD & SVO:random initialization,DSO:ransac-like method, inspired by LSD
 Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
 
@@ -495,9 +499,9 @@ Facing the visual aliasing problem of parking slots, we proposed a robust outlie
 Finally, a two dimensional map of parking slots can be robustly established which is distinguished from the traditional feature-based or point-cloud map for its stability, re-usability, light weight and human readable.
 Our system is implemented on an autonomous driving vehicle and tested in real parking lots.
 
-\section{Related works}
 %brief review of SLAM
-SLAM has long been a classic topic in the robotics field and recently became heated in the autonomous driving\citep{}. 
+SLAM has long been a classic topic in the robotics field\citep{Cadena:2016fp} and recently became heated in the autonomous driving since there are areas where GNSS is not available.\citep{Bansal2015Analysis}. 
+%past,present,furture:The popularity of the SLAM problem is connected with the emergence of indoor applications of mobile robotics.
 \citet{Davison2003Real} \citet{Davison2007MonoSLAM} and \citet{Civera20101} use Extended Kalman Filter(EKF) to simultaneously optimize the sensor and landmarks positions in real-time. 
 These methods modeled the optimization problem as a Markov Chain, thus can provided promising localization results with high efficiency.
 However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
