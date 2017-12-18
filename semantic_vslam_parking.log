@@ -1,0 +1,735 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.21)  15 DEC 2017 12:40
+entering extended mode
+**C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/
+semantic_vslam_parking.tex
+
+(C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/s
+emantic_vslam_parking.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\CTEX\UserData\tex\latex\ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
+
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) (C:\CTEX\UserData\tex\latex\natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip44
+\bibsep=\skip45
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count94
+)
+(C:\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(C:\CTEX\UserData\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
+)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count95
+))
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
+)
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen128
+))
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen129
+)
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count96
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count97
+\leftroot@=\count98
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count99
+\DOTSCASE@=\count100
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen130
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count101
+\c@MaxMatrixCols=\count102
+\dotsspace@=\muskip11
+\c@parentequation=\count103
+\dspbrk@lvl=\count104
+\tag@help=\toks17
+\row@=\count105
+\column@=\count106
+\maxfields@=\count107
+\andhelp@=\toks18
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
+\@envbody=\toks19
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
+emantic_vslam_parking.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 312.
+LaTeX Font Info:    ... okay on input line 312.
+
+-- Lines per column: 58 (exact).
+(C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count108
+\scratchdimen=\dimen137
+\scratchbox=\box30
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen138
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks22
+) (C:\CTEX\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
+))
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
+
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+34.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+)
+
+Package natbib Warning: Citation `DARPA WAYMO' on page 1 undefined on input lin
+e 448.
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Package natbib Warning: Citation `WIFI bluetooth UWB' on page 1 undefined on in
+put line 452.
+
+
+Package natbib Warning: Citation `REFERNCE' on page 1 undefined on input line 4
+53.
+
+
+Underfull \hbox (badness 5302) in paragraph at lines 447--456
+[]\OT1/ptm/m/n/10 UTONOMOUS driv-ing has been wit-nessed great
+ []
+
+
+Package natbib Warning: Citation `ORB' on page 1 undefined on input line 459.
+
+
+Package natbib Warning: Citation `VW paking' on page 1 undefined on input line 
+461.
+
+
+Package natbib Warning: Citation `Horizon DSO' on page 1 undefined on input lin
+e 464.
+
+
+Package natbib Warning: Citation `Horizon DSO' on page 1 undefined on input lin
+e 472.
+
+Missing character: There is no Ô in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no å in font ptmr7t!
+
+Package natbib Warning: Citation `zhanglin' on page 1 undefined on input line 4
+95.
+
+
+Package natbib Warning: Citation `Bansal2015Analysis' on page 1 undefined on in
+put line 503.
+
+
+Package natbib Warning: Author undefined for citation`Davison2003Real' 
+(natbib)                on page 1 on input line 505.
+
+
+Package natbib Warning: Author undefined for citation`Davison2007MonoSLAM' 
+(natbib)                on page 1 on input line 505.
+
+
+Package natbib Warning: Author undefined for citation`Civera20101' 
+(natbib)                on page 1 on input line 505.
+
+
+Package natbib Warning: Citation `why filters' on page 1 undefined on input lin
+e 511.
+
+[1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
+
+
+]
+! Too many }'s.
+l.542 ...sing when multiple objects are searched?}
+                                                  )
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+Package epstopdf Info: Source file: <pic/fig1_overview_of_the_method.eps>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 6321044 bytes
+(epstopdf)             Output file: <pic/fig1_overview_of_the_method-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 57415 bytes
+(epstopdf)             Command: <epstopdf --outfile=pic/fig1_overview_of_the_me
+thod-eps-converted-to.pdf pic/fig1_overview_of_the_method.eps>
+(epstopdf)             \includegraphics on input line 567.
+Package epstopdf Info: Output file is already uptodate.
+
+<pic/fig1_overview_of_the_method-eps-converted-to.pdf, id=9, 722.7pt x 298.1137
+5pt>
+File: pic/fig1_overview_of_the_method-eps-converted-to.pdf Graphic file (type p
+df)
+ <use pic/fig1_overview_of_the_method-eps-converted-to.pdf>
+Package pdftex.def Info: pic/fig1_overview_of_the_method-eps-converted-to.pdf u
+sed on input line 567.
+(pdftex.def)             Requested size: 254.04051pt x 104.79128pt.
+
+Overfull \hbox (2.04051pt too wide) in paragraph at lines 567--568
+ [][] 
+ []
+
+Package epstopdf Info: Source file: <pic/fig2_overview_of_the_method.eps>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 4260318 bytes
+(epstopdf)             Output file: <pic/fig2_overview_of_the_method-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 948900 bytes
+(epstopdf)             Command: <epstopdf --outfile=pic/fig2_overview_of_the_me
+thod-eps-converted-to.pdf pic/fig2_overview_of_the_method.eps>
+(epstopdf)             \includegraphics on input line 573.
+Package epstopdf Info: Output file is already uptodate.
+
+<pic/fig2_overview_of_the_method-eps-converted-to.pdf, id=10, 1128.215pt x 354.
+32375pt>
+File: pic/fig2_overview_of_the_method-eps-converted-to.pdf Graphic file (type p
+df)
+ <use pic/fig2_overview_of_the_method-eps-converted-to.pdf>
+Package pdftex.def Info: pic/fig2_overview_of_the_method-eps-converted-to.pdf u
+sed on input line 573.
+(pdftex.def)             Requested size: 506.2632pt x 158.99377pt.
+
+
+LaTeX Warning: Reference `fig:4' on page 2 undefined on input line 583.
+
+
+LaTeX Warning: Reference `fig of parking slots assemble' on page 2 undefined on
+ input line 584.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.587 ...g slots, which will be elaborated in \sec
+                                                  {}.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.588 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+[2 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig1_overview_of_the_method-eps-converted-to.pdf>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+
+
+LaTeX Warning: Reference `(' on page 3 undefined on input line 662.
+
+
+LaTeX Warning: Reference `(' on page 3 undefined on input line 663.
+
+
+LaTeX Warning: Reference `section optimization' on page 3 undefined on input li
+ne 665.
+
+Package epstopdf Info: Source file: <pic/fig6_Visual_markers.eps>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 71667 bytes
+(epstopdf)             Output file: <pic/fig6_Visual_markers-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 15295 bytes
+(epstopdf)             Command: <epstopdf --outfile=pic/fig6_Visual_markers-eps
+-converted-to.pdf pic/fig6_Visual_markers.eps>
+(epstopdf)             \includegraphics on input line 686.
+Package epstopdf Info: Output file is already uptodate.
+
+<pic/fig6_Visual_markers-eps-converted-to.pdf, id=45, 202.7575pt x 165.61874pt>
+File: pic/fig6_Visual_markers-eps-converted-to.pdf Graphic file (type pdf)
+<use pic/fig6_Visual_markers-eps-converted-to.pdf>
+Package pdftex.def Info: pic/fig6_Visual_markers-eps-converted-to.pdf used on i
+nput line 686.
+(pdftex.def)             Requested size: 202.757pt x 165.61833pt.
+Package epstopdf Info: Source file: <pic/fig7_Visual_markers.eps>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 507365 bytes
+(epstopdf)             Output file: <pic/fig7_Visual_markers-eps-converted-to.p
+df>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 358882 bytes
+(epstopdf)             Command: <epstopdf --outfile=pic/fig7_Visual_markers-eps
+-converted-to.pdf pic/fig7_Visual_markers.eps>
+(epstopdf)             \includegraphics on input line 698.
+Package epstopdf Info: Output file is already uptodate.
+
+<pic/fig7_Visual_markers-eps-converted-to.pdf, id=46, 1735.48375pt x 792.9625pt
+>
+File: pic/fig7_Visual_markers-eps-converted-to.pdf Graphic file (type pdf)
+ <use pic/fig7_Visual_markers-eps-converted-to.pdf>
+Package pdftex.def Info: pic/fig7_Visual_markers-eps-converted-to.pdf used on i
+nput line 698.
+(pdftex.def)             Requested size: 253.05545pt x 115.63243pt.
+
+Overfull \hbox (1.05545pt too wide) in paragraph at lines 698--701
+ [][] 
+ []
+
+[3 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig2_overview_of_the_method-eps-converted-to.pdf> <C:/Users/JohnZhao/Docu
+ments/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/pic/fig6_Visual_markers-
+eps-converted-to.pdf>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+Package epstopdf Info: Source file: <pic/fig8_Optimize.eps>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 70190 bytes
+(epstopdf)             Output file: <pic/fig8_Optimize-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 14458 bytes
+(epstopdf)             Command: <epstopdf --outfile=pic/fig8_Optimize-eps-conve
+rted-to.pdf pic/fig8_Optimize.eps>
+(epstopdf)             \includegraphics on input line 758.
+Package epstopdf Info: Output file is already uptodate.
+
+<pic/fig8_Optimize-eps-converted-to.pdf, id=86, 565.11125pt x 337.26pt>
+File: pic/fig8_Optimize-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pic/fig8_Optimize-eps-converted-to.pdf>
+Package pdftex.def Info: pic/fig8_Optimize-eps-converted-to.pdf used on input l
+ine 758.
+(pdftex.def)             Requested size: 266.41287pt x 158.99377pt.
+
+Overfull \hbox (14.41287pt too wide) in paragraph at lines 758--761
+ [][] 
+ []
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+[4 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig7_Visual_markers-eps-converted-to.pdf> <C:/Users/JohnZhao/Documents/Wo
+rkDir/JohnGitHub/Papers/semantic_vslam_parking/pic/fig8_Optimize-eps-converted-
+to.pdf>]
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ú in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ù in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--836
+\OT1/ptm/m/n/10 e-qua-tion-s ex-press the w-hole op-ti-miza-tion pro-ce-dure:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--836
+
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 816--836
+$\OML/cmm/m/it/10 x$\OT1/ptm/m/n/10 is the s-tate ma-trix(containing real-time 
+car pose and
+ []
+
+Package epstopdf Info: Source file: <pic/fig9_Optimize.eps>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 47383 bytes
+(epstopdf)             Output file: <pic/fig9_Optimize-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 13695 bytes
+(epstopdf)             Command: <epstopdf --outfile=pic/fig9_Optimize-eps-conve
+rted-to.pdf pic/fig9_Optimize.eps>
+(epstopdf)             \includegraphics on input line 847.
+Package epstopdf Info: Output file is already uptodate.
+<pic/fig9_Optimize-eps-converted-to.pdf, id=136, 592.2125pt x 458.71375pt>
+File: pic/fig9_Optimize-eps-converted-to.pdf Graphic file (type pdf)
+
+<use pic/fig9_Optimize-eps-converted-to.pdf>
+Package pdftex.def Info: pic/fig9_Optimize-eps-converted-to.pdf used on input l
+ine 847.
+(pdftex.def)             Requested size: 205.26234pt x 158.99377pt.
+
+
+LaTeX Warning: Reference `??' on page 5 undefined on input line 860.
+
+[5]
+
+! LaTeX Error: File `pic/404' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.877 \includegraphics[height = 1.2in]{pic/404}
+                                               
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pic/404' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.885 \includegraphics[height = 1.2in]{pic/404}
+                                               
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pic/404' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.901 \includegraphics[height = 1.2in]{pic/404}
+                                               
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pic/404' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.909 \includegraphics[height = 1.2in]{pic/404}
+                                               
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `pic/404' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.932 \includegraphics[height = 1.2in]{pic/404}
+                                               
+I could not locate the file with any of these extensions:
+.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 938--940
+
+ []
+
+
+(C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
+emantic_vslam_parking.bbl
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+ [6 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parki
+ng/pic/fig9_Optimize-eps-converted-to.pdf>]
+! Misplaced alignment tab character &.
+<argument> IEEE Transactions on Pattern Analysis &
+                                                   Machine Intelligence
+l.69   Intelligence}
+                    , vol.~29, no.~6, p. 1052, 2007.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ≥ in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+[7]
+(C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
+emantic_vslam_parking.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3477 strings out of 495354
+ 52942 string characters out of 3183859
+ 121516 words of memory out of 3000000
+ 6590 multiletter control sequences out of 15000+200000
+ 43863 words of font info for 81 fonts, out of 3000000 for 9000
+ 17 hyphenation exceptions out of 8191
+ 40i,8n,28p,468b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:
+/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on semantic_vslam_parking.pdf (7 pages, 1563536 bytes).
+PDF statistics:
+ 218 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+

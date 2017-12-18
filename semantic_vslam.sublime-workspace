@@ -1,0 +1,887 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"de",
+				"define"
+			],
+			[
+				"mat",
+				"mapdata"
+			],
+			[
+				"navi",
+				"navinfo"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"condition",
+				"condition_variable"
+			],
+			[
+				"l",
+				"li\tTag"
+			],
+			[
+				"CS",
+				"CS10101001"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"he",
+				"href"
+			],
+			[
+				"alg",
+				"align=\"left"
+			],
+			[
+				"st",
+				"strong\tTag"
+			],
+			[
+				"o",
+				"ol\tTag"
+			],
+			[
+				"h",
+				"href\tAttr"
+			],
+			[
+				"al",
+				"align"
+			],
+			[
+				"top",
+				"top-buffer"
+			],
+			[
+				"se",
+				"section\tTag"
+			],
+			[
+				"meas",
+				"measurement_noise"
+			],
+			[
+				"dist",
+				"distance_noise"
+			],
+			[
+				"wigh",
+				"weight_smooth"
+			],
+			[
+				"stee",
+				"steering_noise"
+			],
+			[
+				"ra",
+				"radius"
+			],
+			[
+				"ran",
+				"range"
+			],
+			[
+				"che",
+				"check_collision"
+			],
+			[
+				"dis",
+				"distance_noise"
+			],
+			[
+				"set",
+				"set_noise"
+			],
+			[
+				"mea",
+				"measurement_noise"
+			],
+			[
+				"err",
+				"error_x"
+			],
+			[
+				"to",
+				"tolerance"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"ste",
+				"steering_noise"
+			],
+			[
+				"ster",
+				"steering_noise"
+			],
+			[
+				"num",
+				"num_collisions"
+			],
+			[
+				"r",
+				"run_PID_control"
+			],
+			[
+				"par",
+				"params"
+			],
+			[
+				"n",
+				"n_params"
+			],
+			[
+				"CTE",
+				"CTE_prev"
+			],
+			[
+				"new",
+				"new_heading"
+			],
+			[
+				"smo",
+				"smooth_beta"
+			],
+			[
+				"po",
+				"policy_2d"
+			],
+			[
+				"pol",
+				"policy"
+			],
+			[
+				"for",
+				"forward"
+			],
+			[
+				"f",
+				"forward"
+			],
+			[
+				"nei",
+				"neighbour"
+			],
+			[
+				"v",
+				"value"
+			],
+			[
+				"del",
+				"delta_name"
+			],
+			[
+				"sor",
+				"sort"
+			],
+			[
+				"x",
+				"xy2"
+			],
+			[
+				"openset",
+				"open_set"
+			],
+			[
+				"clos",
+				"close_set"
+			],
+			[
+				"me",
+				"measurement"
+			],
+			[
+				"nois",
+				"forward_noise"
+			],
+			[
+				"sum",
+				"sumW"
+			],
+			[
+				"Ps",
+				"Ps_new"
+			],
+			[
+				"s",
+				"sense"
+			],
+			[
+				"sen",
+				"sense"
+			],
+			[
+				"a",
+				"append"
+			],
+			[
+				"sens",
+				"sense_noise"
+			],
+			[
+				"turn",
+				"turn_noise"
+			],
+			[
+				"tur",
+				"turn_noise"
+			],
+			[
+				"g",
+				"Gaussian"
+			],
+			[
+				"re",
+				"result"
+			],
+			[
+				"ma",
+				"main\tmain()"
+			],
+			[
+				"mo",
+				"Motion_sigma"
+			],
+			[
+				"m",
+				"Measurements"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"fo",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "semantic_vslam_parking.tex",
+			"settings":
+			{
+				"buffer_size": 61133,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "slam_tiev.bib",
+			"settings":
+			{
+				"buffer_size": 8347,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					""
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Traditional"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - PdfLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - XeLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Basic Builder - LuaLaTeX"
+				],
+				[
+					"Packages/LaTeXTools/LaTeX.sublime-build",
+					"Script Builder"
+				]
+			],
+			[
+				"Packages/LaTeXTools/LaTeX.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 686.0,
+		"last_filter": "mark",
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Save to HTML"
+			],
+			[
+				"",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				":w",
+				":w - Save"
+			],
+			[
+				"Mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"utf",
+				"ConvertToUTF8: Reload with Encoding"
+			],
+			[
+				"Package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package",
+				"Preferences: Browse Packages"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: is",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: add ",
+				"Package Control: Add Repository"
+			],
+			[
+				"Package Control: isnta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: insta\t",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 938.0
+	},
+	"console":
+	{
+		"height": 473.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://dn-52cik.qbox.me/' + pf.replace(' ', '%20')).read(); open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import  urllib.request,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));open(os.path.join(ipp,pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())",
+			"import urllib.request,os,sys; exec(\"if sys.version_info < (3,) or os.name != 'nt': raise OSError('This code is for Windows ST3 only!')\"); pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"help",
+			"a = 5",
+			"hi"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Pub/Meetings/weekly/20171201无人车例会minutes.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/产学研项目/zte/report/test.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Docs/paper/投稿/IEEEtran/bare_conf.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/Docs/paper/投稿/IEEEtran/bare_conf_compsoc.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/project/track_classification_icra2011/tex/latex_macros.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/teaching/IntroCS/2017年导论上课材料/2017ppt/feedback.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/acc/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/Sick/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/Sick/Makefile",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/pidcontroller/src/._CMakeLists.txt",
+		"/C/Users/JohnZhao/AppData/Local/lxss/rootfs/etc/apt/sources.list",
+		"/C/Users/JohnZhao/AppData/Local/lxss/home/john/.vimrc",
+		"/C/Users/JohnZhao/AppData/Local/lxss/home/john/vier/.vimrc",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/slam_tiev.bib",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Personal/Server/vmsphere.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Personal/Server/pwd.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Personal/Server/SVN登陆.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Personal/Server/222.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Pub/Meetings/weekly/20171207无人车例会minutes.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/script/env_dependency_install.sh",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/script/env_install_script/lcm_install.sh",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/script/env_install_script/opencv_install.sh",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/library/rndf/rndf.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/dst/svm_light/LICENSE.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/pidcontrol/pidcontrol.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/pidcontrol/pidcontrol.cc",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/ibeo/ibeo_ipc.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/ibeo/ibeocore.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/ibeo/ibeocore.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/ibeo/ibeo.cc",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/program/ibeo/ibeo_ipc.cc",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/DeveolopTest/Qt/IMU_mapper/receiver.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/nsfc/2018/改进.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Supervision/MSc/2018/陈舒嘉/毕业设计.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Supervision/BSc/本科毕业设计/20141015题目.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/HDL64E(sunlu)/HDL64E/structLASERMAP.cs",
+		"/C/Users/JohnZhao/Desktop/jiugongge.csv",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/2017 常熟调车计划安排.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/PerceptionFusion/PerceptionFusion/node.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/PerceptionFusion/PerceptionFusion/map_offset.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/TX2_CAN/CAN_Communication.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/PerceptionFusion/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/readme/bash/install-TiEV-2017.sh",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/pidcontroller/src/pidcontroller.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/pidcontroller/src/pidcontrollerThread.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/readme/TiEV_E50操作说明.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/TiEV2017_编译说明.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/acc/acc.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/acc/acc.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/DeveolopTest/iv/planner/planner/planner/planner.cfg",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Pub/Documents/改装/Contracts/NG/验收报告/1220/说明.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/mpcontroller/src/controller_mpc.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/mpcontroller/src/regression.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/mpcontroller/src/smooth.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/shrink-wrapping-paper/test.tex",
+		"/C/Users/JohnZhao/Desktop/semantic_vslam_parking.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/planner/planner/planner/planner.cfg",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/lcm/lcm-linux/lcm-1.3.1/docs/content/multicast-setup.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/test/MPCController/mpc/params.ini",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/pidcontroller/include/pidcontroller.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/DeveolopTest/LCM/lcm-1.3.1/lcm-1.3.1/docs/content/multicast-setup.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structAIMPATHINT.lcm",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structAIMPATHINT.hpp",
+		"/C/Users/JohnZhao/Desktop/VisualData.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/IEEE_ITS_jrnl.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/slam_tiev.bib",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/IEEE_ITS_jrnl.bbl",
+		"/C/Users/JohnZhao/Documents/WorkDir/Docs/paper/投稿/IEEEtran/bib/README",
+		"/C/Users/JohnZhao/Documents/WorkDir/Docs/paper/投稿/IEEEtran/bib/IEEEexample.bib",
+		"/C/Users/JohnZhao/Documents/WorkDir/Docs/paper/投稿/IEEEtran/README",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/project/semisupervised/latex/process_bib.py",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/project/online_learning/latex/icra2012.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/stanford_self_driving_car_code-master/Version2-InCar/src/project/online_learning/Makefile",
+		"/C/Users/JohnZhao/Documents/WorkDir/Docs/paper/投稿/IEEEtran/bib/IEEEtran.bst",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/shrink-wrapping-paper/TeX reports the error was in file",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/TiEV_E50操作说明.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/solve.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/tag.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/SLAMHelper.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/tag.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/solve 2.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/parameterReader.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/SLAMHelper.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/!stereo_func_module/2017/taginfo.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/MySite/Personal/papers/mypub.bib",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/daemonWin/deamonwin.bat",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/daemon/main.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/experiment/TUDelft/libigl-master/python/CMakeLists.txtold",
+		"/C/Users/JohnZhao/Downloads/lz4-1.7.4.2/contrib/cmake_unofficial/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/JohnGitHub/shrink-wrapping-paper/Automatic_repair_generalization_shrink_wrapping.tex",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structDECTIONINFO.hpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structDECTIONINFO.lcm",
+		"/F/TiEV/logdata/route_map/2017_10_28_21_20.pose",
+		"/F/TiEV/logdata/route_map/2017_10_28_21_15.pose",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/lcm/readme.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/test/ModuleTest/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/coordinate_converter/CMakeLists.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/coordinate_converter/coordinate_converter.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/coordinate_converter/coordinate_converter.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/coordinate_converter/WGS84UTM.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/coordinate_converter/basic_coordinate_converter.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/coordinate_converter/basic_coordinate_converter.h",
+		"/F/TiEV/logdata/readme.txt",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Pub/Meetings/weekly/20171027无人车例会minutes.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/Supervision/MSc/2016/基于深度学习的单目视觉深度估计方法研究-黄业韡/pipline2.eps",
+		"/C/Users/JohnZhao/Documents/WorkDir/Projects/Tongji/智能无人车/Pub/Meetings/weekly/20171020无人车例会minutes.md",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structSICKMAP.lcm",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structLASERMAP.lcm",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structFUSIONMAP.lcm",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structLUXMAP.lcm",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/LCM/c/exlcm_example_t.c",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/LCM/c/exlcm_example_t.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/LCM/c/example_t.lcm",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/TheLastMile/LCM/cpp/exlcm/example_t.hpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/PerceptionFusion/PerceptionFusion/include/image_fusion.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/PerceptionFusion/PerceptionFusion/image_fusion.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/common/nature.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/Lux/lux_8.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/IMU_Receiver(linux+lcm)/receiver.cpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/PerceptionFusion/Cartographer/build/cartographer/mapping/proto/submap_visualization.pb.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/IMU_Receiver(linux+lcm)/NComRxC.c",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/msg/structNAVINFO.hpp",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/esr/esr/NavInfo.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/planner/src/common/coordinate_converter/coordinate_converter.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/planner/src/common/coordinate_converter/basic_coordinate_converter.h",
+		"/C/Users/JohnZhao/Documents/WorkDir/development/IV/TiEV/2017/src/modules/planner/src/common/coordinate_converter/coordinate_converter.cpp"
+	],
+	"find":
+	{
+		"height": 72.0
+	},
+	"find_in_files":
+	{
+		"height": 133.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"yewei",
+			"parking space",
+			"fig",
+			"filetype",
+			"ths",
+			"getImage",
+			"getImg",
+			"getImage",
+			"accSpeed",
+			"ACC",
+			"JudgeSteer",
+			"JudgeSpeed",
+			"JudgeSteer",
+			"mapData",
+			"GRID_ROW",
+			"cells",
+			"mapData",
+			"Caption",
+			"muliline",
+			"controlPara",
+			"JudgeSteer",
+			"findSpeed",
+			"speedOf",
+			"debugDeflection",
+			"msg",
+			"tmpline",
+			"pidcontroller",
+			"PidControllerThread",
+			"Visual",
+			"bibli",
+			"natbib",
+			"Fig",
+			"to",
+			"M\\\\\"{o}ller",
+			"M\\\"{o}ller",
+			"moe",
+			"Constraint",
+			"constraints_topology",
+			"tag_thread_online",
+			"pylon",
+			"Grab",
+			"Geometric",
+			"Definition",
+			"definition",
+			"\\wedge",
+			"\\ ",
+			"disconnect",
+			"get_rotate_map_add_trans",
+			"translateTransform",
+			"dist",
+			"get_rotate_map",
+			"translateTransform",
+			"minr",
+			"getvelo",
+			"projectBox",
+			"getvelo",
+			"pointproj",
+			"excuta",
+			"projectBox",
+			"getvelo",
+			"projectBox",
+			"getvelo",
+			"l",
+			"linectr",
+			"pointproj",
+			"dplDataVector",
+			"oneFramefordpl",
+			"hdl64pointfordpl",
+			"oneFramefordpl",
+			"dplDataVector",
+			"dpldataTemp",
+			"detection",
+			"DETECTION",
+			"dlFunction",
+			"detection",
+			"process",
+			"Handler",
+			"src1_inout",
+			"map_fusion",
+			"src_temp1",
+			"overlap_mat",
+			"fusion",
+			"image fusion"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"parking slot",
+			"Moeller",
+			"\\ \\\\wedge",
+			"\\ \\wedge"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "semantic_vslam_parking.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 61133,
+						"regions":
+						{
+							"bookmark_a":
+							{
+								"flags": 144,
+								"regions":
+								[
+									[
+										20269,
+										20269
+									]
+								]
+							}
+						},
+						"selection":
+						[
+							[
+								26287,
+								26287
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 43360.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "slam_tiev.bib",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2665,
+								2665
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LaTeXTools/BibLaTeX.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3423.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 72.0
+	},
+	"input":
+	{
+		"height": 49.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 220.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.latextools":
+	{
+		"height": 517.0
+	},
+	"output.markdown":
+	{
+		"height": 222.0
+	},
+	"pinned_build_system": "",
+	"project": "semantic_vslam.sublime-project",
+	"replace":
+	{
+		"height": 129.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 88.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

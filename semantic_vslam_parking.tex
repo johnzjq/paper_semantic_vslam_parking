@@ -727,14 +727,14 @@ These obstacle information can facilitate the route planning inside of a parking
 % Though RGBD camera like Kinect can captures walls easily, they do cost a lot. 
 % Visual markers, which present pillar-walls are introduced for its robustness and high efficiency.
 
-%TODO
 \subsection{Optimization}
 
-% put them here temporarly
-
 At every frame, the relative car-landmark position, together with the speed and angular changes of vehicle should be added to the parking map incrementally. 
-These values are archived from a Kalman-based extrapolater with the steering wheel, car speed and the compass readings from a cheap IMU as the input.
-During the mapping stage, the popular graph optimizer G2O is used, some experimental designed rules are also introduced for outliner detection. 
+These values are archived from a Kalman-based extrapolator with the steering wheel, car speed and the compass readings from a cheap IMU as the inputs.
+The popular graphic optimizer G2O is used in the mapping stage\citep{K2011G2o}.
+Due to fallible detection of parking spaces and their ids with low-quality surround vising images, ambiguities will be presented during date association.
+We thus proposed robust outlier detection and elimination method during this stage.
+
 Thus, the offline part outputs a 2D parking map and an optimized vehicle trajectory. 
 During the online stage, the former parking map acts as the initial map, and is updated simultaneously with the extended Kalman filter(EKF). 
 This results in a smoother trajectory, which helps the further control task.
@@ -742,9 +742,8 @@ This results in a smoother trajectory, which helps the further control task.
 %
 
 
-In this section, a 2D map is built by fusing all the observation datum collected in the former sections. 
+In this section, a map of parking spaces is built by fusing all the observation datum collected in the former sections. 
 The accumulated error of IMU may cause drifting in localization. 
-Due to imprecise detection of tags or lots, there will be ambiguities in the map. 
 To avoid these problems, we use the popular g2o\cite{K2011G2o} framework together with the max-mixture model \cite{Pfingsthorn2014Representing} to optimize both car and landmarks positions and ensure correct data association in the offline section, the figure above give the overall view of the optimization step.
 
 During the offline stage, we use \cite{K2011G2o} to build the initial parking map. 
