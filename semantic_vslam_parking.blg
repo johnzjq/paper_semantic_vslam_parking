@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: semantic_vslam_parking.aux
+White space in argument---line 2 of file semantic_vslam_parking.aux
+ : \citation{DARPA
+ :                 WAYMO}
+I'm skipping whatever remains of this command
+White space in argument---line 3 of file semantic_vslam_parking.aux
+ : \citation{WIFI
+ :                bluetooth UWB}
+I'm skipping whatever remains of this command
+White space in argument---line 6 of file semantic_vslam_parking.aux
+ : \citation{VW
+ :              paking}
+I'm skipping whatever remains of this command
+White space in argument---line 7 of file semantic_vslam_parking.aux
+ : \citation{Horizon
+ :                   DSO}
+I'm skipping whatever remains of this command
+White space in argument---line 12 of file semantic_vslam_parking.aux
+ : \citation{Horizon
+ :                   DSO}
+I'm skipping whatever remains of this command
+White space in argument---line 28 of file semantic_vslam_parking.aux
+ : \citation{why
+ :               filters}
+I'm skipping whatever remains of this command
+The style file: IEEEtran.bst
+Database file #1: slam_tiev.bib
+Warning--I didn't find a database entry for "REFERNCE"
+Warning--I didn't find a database entry for "ORB"
+Warning--I didn't find a database entry for "zhanglin"
+Warning--I didn't find a database entry for ""
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in Engel2014LSD
+Warning--empty journal in Forster2013SVO
+Warning--empty journal in Younes2016A
+Warning--empty journal in Himstedt2017Online
+Warning--empty journal in Bansal2015Analysis
+Warning--empty journal in Bailey2006Simultaneous
+Warning--empty journal in Li2016Semi
+Warning--empty journal in Hong2016PVANet
+
+Done.
+(There were 6 error messages)
