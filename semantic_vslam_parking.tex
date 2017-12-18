@@ -3,6 +3,7 @@
 \usepackage{url}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{color}
 
 %-- some setups
 \newcommand{\ie}{i.e.\ }
@@ -10,6 +11,7 @@
 \newcommand{\Reffig}[1]{Fig.~\ref{#1}}
 \newcommand{\Refsec}[1]{Sec.~\ref{#1}}
 \newcommand{\Reftab}[1]{Tab.~\ref{#1}}
+\newcommand{\COMMENT}[1]{\textcolor{red}{#1}}
 %
 % If IEEEtran.cls has not been installed in to the LaTeX system files,
 % manually specify the path to it like:
@@ -470,7 +472,7 @@ However, they often require high frame rate and are susceptible to global illumi
 
 %Moreover, the re-localization based on pre-built dense map is not trivial (to verify).
 Moreover, the performances of direct SLAM systems also depend on a good map initialization.\citep{Younes2016A}\citep{Horizon DSO}
-(John: the link between these two line are not clear; Btw, how can a dense method realized re-localization? is it trivial or is it a shortcoming for these methods?)
+\COMMENT{John: the link between these two line are not clear; Btw, how can a dense method realized re-localization? is it trivial or is it a shortcoming for these methods?}
 
 (Huang:In LSD SLAM，it is said that most dense method is simply a VO, while LSD has loop closure procedure. 
 However, LSD itself do not have a map read and write module, but the LSD paper and the survey(Younes2016A) didn't mention this. Also since the direct method is not robust to illumination changes, re-localization using a pre-built map is of course almost unrealistic.)
@@ -516,7 +518,7 @@ The graph-based optimization method is closely related to a Markov random field 
 % review of VSLAM
 Generally VSLAM methods fall into two groups, so called feature-based methods (the indirect methods) and direct methods. 
 In feature-based methods, low-level features are detected and treated as landmarks. 
-To prevent integrating all the features into the factor graph(John:should use correct expression from PTAM), PTAM\cite{Klein2007Parallel} separates tracking and mapping into two sub-tasks, keyframes are extracted and used in optimization, but because of what?? it still works in small areas(a desk or a room corner). 
+To prevent integrating all the features into the factor graph\COMMENT{John:should use correct expression from PTAM}, PTAM\cite{Klein2007Parallel} separates tracking and mapping into two sub-tasks, keyframes are extracted and used in optimization, but because of what?? it still works in small areas(a desk or a room corner). 
 \cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework\citep{K2011G2o}. 
 Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers stable and efficient graph-based VSLAM system.
 With the keyframe detection and the BoW-empowered fast loop closure detection, ORB-SLAM performs well in various indoor and outdoor environments. 
@@ -590,7 +592,7 @@ Furthermore, the ID of each parking slot should be detected for facilitating dat
 
 Another kind of landmark used in our system is visual fiducial markers.
 % Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
-Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits (John:but we put the markers in the inner path of two rings?). 
+Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits \COMMENT{John:but we put the markers in the inner path of two rings?}. 
 In the practice, we found that fiducial markers may not be fully prohibited but their number can be limited to a small amount. 
 We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz)\citep{Olson2011AprilTag}.
 % Parking lots are detected from the top-view image with the state of art CNN based parking lot recognition method \cite{Li2017Vision}. 
@@ -602,7 +604,7 @@ We adopt the method proposed by \citep{Li2017Vision} to detect parking slots.
 
 %
 
-(John: Donot repeat existing method, briefly describe the detection method and emphasize on the post processing if there is any and the ID detection)
+\COMMENT{John: Donot repeat existing method, briefly describe the detection method and emphasize on the post processing if there is any and the ID detection}
 
 
 % Most traditional parking slot recognition methods use low-level features, such as corners and edges, which result in unstable and imprecise detections.
@@ -655,7 +657,7 @@ Once a parking-line is detected, the direction of a lot is determined as well. A
 	
 Since the relative car coordinate overlaps the top-view image coordinate, the lot coordinate in the top-view image is the same as that in the vehicle relative coordinate. 
 
-(John: ADD how to parameterize the parking slot, if we planned to optimize the shape of a parking slot? )
+\COMMENT{John: ADD how to parameterize the parking slot, if we planned to optimize the shape of a parking slot? }
 
 ID of a parking slot is important for the association of this semantic landmark.
 We fine turned PVANet to detect each character in one ID \citep{Hong2016PVANet}.
@@ -690,7 +692,7 @@ Recalling the goal of our robustly localization system for autonomous driving an
 We adopted AprilTag and employed the detection framework from the AprilTag C source Open Library \footnote{https://april.eecs.umich.edu/wiki/AprilTags}\cite{Olson2011AprilTag}.
 We further solved the relative position between visual markers and the vehicle by the PnP model in a fast and accurate way \cite{Hartley2003Multiple}. 
 
-(John: Can we improve the efficient or the accuracy when localization a tag?)
+\COMMENT{John: Can we improve the efficient or the accuracy when localization a tag?}
 % Every tag texture indicates a unique ID, so tag data association is always correct.
 
 \begin{figure}
@@ -732,25 +734,18 @@ These obstacle information can facilitate the route planning inside of a parking
 At every frame, the relative car-landmark position, together with the speed and angular changes of vehicle should be added to the parking map incrementally. 
 These values are archived from a Kalman-based extrapolator with the steering wheel, car speed and the compass readings from a cheap IMU as the inputs.
 The popular graphic optimizer G2O is used in the mapping stage\citep{K2011G2o}.
-Due to fallible detection of parking spaces and their ids with low-quality surround vising images, ambiguities will be presented during date association.
-We thus proposed robust outlier detection and elimination method during this stage.
-
-Thus, the offline part outputs a 2D parking map and an optimized vehicle trajectory. 
-During the online stage, the former parking map acts as the initial map, and is updated simultaneously with the extended Kalman filter(EKF). 
-This results in a smoother trajectory, which helps the further control task.
+Due to fallible detection of parking spaces and their ids with low-quality surround vising images, ambiguities will be presented during data association.
+As a result, robust outlier detection and elimination method should be proposed during this stage.
 
 %
 
-
-In this section, a map of parking spaces is built by fusing all the observation datum collected in the former sections. 
-The accumulated error of IMU may cause drifting in localization. 
-To avoid these problems, we use the popular g2o\cite{K2011G2o} framework together with the max-mixture model \cite{Pfingsthorn2014Representing} to optimize both car and landmarks positions and ensure correct data association in the offline section, the figure above give the overall view of the optimization step.
-
-During the offline stage, we use \cite{K2011G2o} to build the initial parking map. 
-All the observations are treated as edges in the graph. 
-Observations from vehicle to tag or vehicle are presented by G2O standard edges. 
-However, observations from vehicle to parking lot sometimes contain miss data association causing by lot ID detection error and lead to great residual error in the graph. 
-ID detection error is inevitable, so max mixture models \cite{Pfingsthorn2014Representing} are introduced to eliminate the mistaken associations.
+We propose to additionally feed the offline optimized map as the initialization for online extended Kalman filter (EKF) framework.
+The reason is the performance of graph-based optimization is inferior to EKF during online localization applications.
+\COMMENT{John: is it true? why not using g2o online? we should explain}
+The overall of the optimization pipline is shown in \Reffig{fig:8}. 
+% Thus, the offline part outputs a 2D parking map and an optimized vehicle trajectory. 
+% During the online stage, the former parking map acts as the initial map, and is updated simultaneously with the extended Kalman filter(EKF). 
+% This results in a smoother trajectory, which helps the further control task.
 
 \begin{figure}
 \centering
@@ -760,10 +755,25 @@ The overall pipeline of the offline optimization stage
 }\label{fig:8}
 \end{figure}
 
-\subsubsection{G2O Optimization Framework}
+\subsubsection{Offline Optimization Framework}
+\COMMENT{John: should we seperate offline and online }
+
+% In this section, a map of parking spaces is built by fusing all the observation datum collected in the former sections. 
+% The accumulated error of IMU may cause drifting in localization. 
+% To avoid these problems, we use the popular g2o\cite{K2011G2o} framework together with the max-mixture model \cite{Pfingsthorn2014Representing} to optimize both car and landmarks positions and ensure correct data association in the offline section, the figure above give the overall view of the optimization step.
+
 \cite{K2011G2o} offers a global framework for nonlinear least square problems. 
 Under the G2O framework, all the elements to be optimized are regarded as vertices, while all the observation constraints are known as edges who connect vertices. 
-The least square problem of graph optimization in SLAM field can be expressed by the following equation:
+In our method all the observations of parking spaces and fiducial markers are treated as edges in the graph. 
+% Observations from vehicle to tag or vehicle are presented by G2O standard edges. 
+However, ambiguity raised from observations of parking spaces as well as parking ids lead to erroneous data associations and generate fatal residual error in the optimization. 
+
+Several robust optimization extensions exist, in the paper, max mixture models are introduced
+to detect and eliminate the mistaken associations\citep{Pfingsthorn2014Representing}.
+% ID detection error is inevitable, so max mixture models \cite{Pfingsthorn2014Representing} are 
+% introduced to eliminate the mistaken associations.
+The original least square problem of graph optimization can be expressed by the following equation:
+\COMMENT{John: abbreviate the explanation of the g2o, but should add the robust method and emphasize on our contributions}
 
 $F(x)=\sum\limits_{k \in C}e_k{(x_k,z_k)}^T{\Omega}_k e_k(x_k,z_k)$\cite{K2011G2o}\\
 $x^{*} = \mathop{argminF(x)}\limits_x$\cite{K2011G2o}\\
@@ -786,7 +796,7 @@ However, the IDs are so small on the top view image, only limited number of ID a
 Finally, all the detected ID and measurement of parking lots are added to the graph as max mixture \cite{Pfingsthorn2014Representing} edges with multiple hypothesis including null hypothesis.
 %
 
-\subsubsection{Max-Mixture Model}
+\subsubsection{Outliers elimination using Max-Mixture Model}
 Max-Mixture Model \cite{Pfingsthorn2014Representing} aims to detect loop closure errors in the “back-end” part of a pose graph. 
 Traditionally, all distributions in a “back-end” graph system are considered as unimodal Gaussians, thus wrongly associated datum result in great global errors. 
 When sum-mixture model replaces unimodal Gaussian, wrongly associated data can be suppressed by other mixture elements. 
@@ -852,12 +862,44 @@ The connection between the vehicle at each time stamp and the landmarks.
 
 
 \section{Experiments}
+\COMMENT{JOHN: should firstly describe the test environment, size map lighting condition and car etc.}
+
 In this section, we test our method both online and offline, and discuss several questions about the usage of visual markers. 
-All the parking lot datasets are collected by Roewe E50 in Jiading Campus of Tongji University.
+All the parking lot datasets are collected and tested by TiEV autonomous vehicle \footnote{cs1.tongji.edu.cn/tiev} .
 \subsection{Semantic landmark detection and localization}
 
+\COMMENT{John: models used, training workflow, training samples and detection results and statistics, short conclusion}
 \Reffig{??} show a subset of the training samples used.
 
+\COMMENT{John: offline should be placed before online}
+
+\subsection{Offline mapping test}
+As to the offline part, several datasets with different starting points are collected. 
+Each dataset is processed independently.
+The covariance of each edge shifts from 0.1 to 0.25 according to its confidence level.
+Fig 12 shows the map result for two of these datasets.
+Map blocks with more tags have higher precision as tags are ideal landmarks who will never be wrongly associated.
+The low detection rate of parking ID also affects the mapping result, as shown in fig 13.
+
+\begin{figure*}
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+toDo%有tag的建好的图，标出无tag部分，loop closure前后的图，共四个
+}\label{fig:12}
+\end{figure*}
+
+\begin{figure*}
+\centering
+\includegraphics[height = 1.2in]{pic/404}
+\caption{
+toDo%有tag的parking ID经过调整和未经过调整的图，两对，共四个
+}\label{fig:13}
+\end{figure*}
+
+In one dataset, there is a no-tag map block (marked in fig 12), where wrongly associated data always occurs.
+However, once a loop is detected, all landmark-positions are corrected.
+Then, duplicate landmarks are merged.
 
 
 \subsection{Online real-time mapping and localization}
@@ -887,33 +929,7 @@ A comparison between the human-driving and automatic driving trace%这个数据�
 }\label{fig:11}
 \end{figure}
 
-\subsection{Offline mapping test}
-As to the offline part, several datasets with different starting points are collected. 
-Each dataset is processed independently.
-The covariance of each edge shifts from 0.1 to 0.25 according to its confidence level.
-Fig 12 shows the map result for two of these datasets.
-Map blocks with more tags have higher precision as tags are ideal landmarks who will never be wrongly associated.
-The low detection rate of parking ID also affects the mapping result, as shown in fig 13.
-
-\begin{figure*}
-\centering
-\includegraphics[height = 1.2in]{pic/404}
-\caption{
-toDo%有tag的建好的图，标出无tag部分，loop closure前后的图，共四个
-}\label{fig:12}
-\end{figure*}
-
-\begin{figure*}
-\centering
-\includegraphics[height = 1.2in]{pic/404}
-\caption{
-toDo%有tag的parking ID经过调整和未经过调整的图，两对，共四个
-}\label{fig:13}
-\end{figure*}
-
-In one dataset, there is a no-tag map block (marked in fig 12), where wrongly associated data always occurs.
-However, once a loop is detected, all landmark-positions are corrected.
-Then, duplicate landmarks are merged.
+\subsection{Comparison with ORB2-SLAM}
 
 \subsection{How many tag is needed?}
 
@@ -944,7 +960,7 @@ be separated in the lot
 compare the solution to the statistic result
 very similar
 
-(john: should add Tags can be replaced by instruction arrows or parkinglot ids on the pillar, here restricted by the goal and the environment tags are required )
+\COMMENT{John: should add Tags can be replaced by instruction arrows or parkinglot ids on the pillar, here restricted by the goal and the environment tags are required }
 % An example of a floating figure using the graphicx package.
 % Note that \label must occur AFTER (or within) \caption.
 % For figures, \caption should occur after the \includegraphics.

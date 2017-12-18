@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.21)  15 DEC 2017 12:40
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.21)  18 DEC 2017 21:08
 entering extended mode
 **C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/
 semantic_vslam_parking.tex
@@ -215,20 +215,28 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
 )
+(C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+)
 (C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
 emantic_vslam_parking.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 312.
-LaTeX Font Info:    ... okay on input line 312.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 312.
-LaTeX Font Info:    ... okay on input line 312.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 312.
-LaTeX Font Info:    ... okay on input line 312.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 312.
-LaTeX Font Info:    ... okay on input line 312.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 312.
-LaTeX Font Info:    ... okay on input line 312.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 312.
-LaTeX Font Info:    ... okay on input line 312.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
 
 -- Lines per column: 58 (exact).
 (C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
@@ -291,72 +299,68 @@ G,.JBIG2,.JB2,.eps]
 )
 
 Package natbib Warning: Citation `DARPA WAYMO' on page 1 undefined on input lin
-e 448.
+e 450.
 
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
 Package natbib Warning: Citation `WIFI bluetooth UWB' on page 1 undefined on in
-put line 452.
+put line 454.
 
 
 Package natbib Warning: Citation `REFERNCE' on page 1 undefined on input line 4
-53.
+55.
 
 
-Underfull \hbox (badness 5302) in paragraph at lines 447--456
+Underfull \hbox (badness 5302) in paragraph at lines 449--458
 []\OT1/ptm/m/n/10 UTONOMOUS driv-ing has been wit-nessed great
  []
 
 
-Package natbib Warning: Citation `ORB' on page 1 undefined on input line 459.
+Package natbib Warning: Citation `ORB' on page 1 undefined on input line 461.
 
 
 Package natbib Warning: Citation `VW paking' on page 1 undefined on input line 
-461.
+463.
 
 
 Package natbib Warning: Citation `Horizon DSO' on page 1 undefined on input lin
-e 464.
+e 466.
 
 
 Package natbib Warning: Citation `Horizon DSO' on page 1 undefined on input lin
-e 472.
+e 474.
 
 Missing character: There is no Ô in font ptmr7t!
 Missing character: There is no º in font ptmr7t!
 Missing character: There is no å in font ptmr7t!
 
 Package natbib Warning: Citation `zhanglin' on page 1 undefined on input line 4
-95.
-
-
-Package natbib Warning: Citation `Bansal2015Analysis' on page 1 undefined on in
-put line 503.
+97.
 
 
 Package natbib Warning: Author undefined for citation`Davison2003Real' 
-(natbib)                on page 1 on input line 505.
+(natbib)                on page 1 on input line 507.
 
 
 Package natbib Warning: Author undefined for citation`Davison2007MonoSLAM' 
-(natbib)                on page 1 on input line 505.
+(natbib)                on page 1 on input line 507.
 
 
 Package natbib Warning: Author undefined for citation`Civera20101' 
-(natbib)                on page 1 on input line 505.
+(natbib)                on page 1 on input line 507.
 
 
 Package natbib Warning: Citation `why filters' on page 1 undefined on input lin
-e 511.
+e 513.
 
 [1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
 ]
 ! Too many }'s.
-l.542 ...sing when multiple objects are searched?}
+l.544 ...sing when multiple objects are searched?}
                                                   )
 You've closed more groups than you opened.
 Such booboos are generally harmless, so keep going.
@@ -370,7 +374,7 @@ ted-to.pdf>
 (epstopdf)                    size: 57415 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig1_overview_of_the_me
 thod-eps-converted-to.pdf pic/fig1_overview_of_the_method.eps>
-(epstopdf)             \includegraphics on input line 567.
+(epstopdf)             \includegraphics on input line 569.
 Package epstopdf Info: Output file is already uptodate.
 
 <pic/fig1_overview_of_the_method-eps-converted-to.pdf, id=9, 722.7pt x 298.1137
@@ -379,10 +383,10 @@ File: pic/fig1_overview_of_the_method-eps-converted-to.pdf Graphic file (type p
 df)
  <use pic/fig1_overview_of_the_method-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig1_overview_of_the_method-eps-converted-to.pdf u
-sed on input line 567.
+sed on input line 569.
 (pdftex.def)             Requested size: 254.04051pt x 104.79128pt.
 
-Overfull \hbox (2.04051pt too wide) in paragraph at lines 567--568
+Overfull \hbox (2.04051pt too wide) in paragraph at lines 569--570
  [][] 
  []
 
@@ -395,7 +399,7 @@ ted-to.pdf>
 (epstopdf)                    size: 948900 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig2_overview_of_the_me
 thod-eps-converted-to.pdf pic/fig2_overview_of_the_method.eps>
-(epstopdf)             \includegraphics on input line 573.
+(epstopdf)             \includegraphics on input line 575.
 Package epstopdf Info: Output file is already uptodate.
 
 <pic/fig2_overview_of_the_method-eps-converted-to.pdf, id=10, 1128.215pt x 354.
@@ -404,20 +408,20 @@ File: pic/fig2_overview_of_the_method-eps-converted-to.pdf Graphic file (type p
 df)
  <use pic/fig2_overview_of_the_method-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig2_overview_of_the_method-eps-converted-to.pdf u
-sed on input line 573.
+sed on input line 575.
 (pdftex.def)             Requested size: 506.2632pt x 158.99377pt.
 
 
-LaTeX Warning: Reference `fig:4' on page 2 undefined on input line 583.
+LaTeX Warning: Reference `fig:4' on page 2 undefined on input line 585.
 
 
 LaTeX Warning: Reference `fig of parking slots assemble' on page 2 undefined on
- input line 584.
+ input line 586.
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.587 ...g slots, which will be elaborated in \sec
+l.589 ...g slots, which will be elaborated in \sec
                                                   {}.
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -425,7 +429,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.588 
+l.590 
       
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -440,14 +444,14 @@ Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
 
 
-LaTeX Warning: Reference `(' on page 3 undefined on input line 662.
+LaTeX Warning: Reference `(' on page 3 undefined on input line 664.
 
 
-LaTeX Warning: Reference `(' on page 3 undefined on input line 663.
+LaTeX Warning: Reference `(' on page 3 undefined on input line 665.
 
 
 LaTeX Warning: Reference `section optimization' on page 3 undefined on input li
-ne 665.
+ne 667.
 
 Package epstopdf Info: Source file: <pic/fig6_Visual_markers.eps>
 (epstopdf)                    date: 2017-11-14 11:44:43
@@ -458,14 +462,14 @@ df>
 (epstopdf)                    size: 15295 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig6_Visual_markers-eps
 -converted-to.pdf pic/fig6_Visual_markers.eps>
-(epstopdf)             \includegraphics on input line 686.
+(epstopdf)             \includegraphics on input line 688.
 Package epstopdf Info: Output file is already uptodate.
 
 <pic/fig6_Visual_markers-eps-converted-to.pdf, id=45, 202.7575pt x 165.61874pt>
 File: pic/fig6_Visual_markers-eps-converted-to.pdf Graphic file (type pdf)
 <use pic/fig6_Visual_markers-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig6_Visual_markers-eps-converted-to.pdf used on i
-nput line 686.
+nput line 688.
 (pdftex.def)             Requested size: 202.757pt x 165.61833pt.
 Package epstopdf Info: Source file: <pic/fig7_Visual_markers.eps>
 (epstopdf)                    date: 2017-11-14 11:44:43
@@ -476,7 +480,7 @@ df>
 (epstopdf)                    size: 358882 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig7_Visual_markers-eps
 -converted-to.pdf pic/fig7_Visual_markers.eps>
-(epstopdf)             \includegraphics on input line 698.
+(epstopdf)             \includegraphics on input line 700.
 Package epstopdf Info: Output file is already uptodate.
 
 <pic/fig7_Visual_markers-eps-converted-to.pdf, id=46, 1735.48375pt x 792.9625pt
@@ -484,10 +488,10 @@ Package epstopdf Info: Output file is already uptodate.
 File: pic/fig7_Visual_markers-eps-converted-to.pdf Graphic file (type pdf)
  <use pic/fig7_Visual_markers-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig7_Visual_markers-eps-converted-to.pdf used on i
-nput line 698.
+nput line 700.
 (pdftex.def)             Requested size: 253.05545pt x 115.63243pt.
 
-Overfull \hbox (1.05545pt too wide) in paragraph at lines 698--701
+Overfull \hbox (1.05545pt too wide) in paragraph at lines 700--703
  [][] 
  []
 
@@ -509,7 +513,7 @@ Package epstopdf Info: Source file: <pic/fig8_Optimize.eps>
 (epstopdf)                    size: 14458 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig8_Optimize-eps-conve
 rted-to.pdf pic/fig8_Optimize.eps>
-(epstopdf)             \includegraphics on input line 758.
+(epstopdf)             \includegraphics on input line 752.
 Package epstopdf Info: Output file is already uptodate.
 
 <pic/fig8_Optimize-eps-converted-to.pdf, id=86, 565.11125pt x 337.26pt>
@@ -517,10 +521,10 @@ File: pic/fig8_Optimize-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pic/fig8_Optimize-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig8_Optimize-eps-converted-to.pdf used on input l
-ine 758.
+ine 752.
 (pdftex.def)             Requested size: 266.41287pt x 158.99377pt.
 
-Overfull \hbox (14.41287pt too wide) in paragraph at lines 758--761
+Overfull \hbox (14.41287pt too wide) in paragraph at lines 752--755
  [][] 
  []
 
@@ -553,17 +557,17 @@ Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 816--836
+Underfull \hbox (badness 10000) in paragraph at lines 825--845
 \OT1/ptm/m/n/10 e-qua-tion-s ex-press the w-hole op-ti-miza-tion pro-ce-dure:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 816--836
+Underfull \hbox (badness 10000) in paragraph at lines 825--845
 
  []
 
 
-Underfull \hbox (badness 2781) in paragraph at lines 816--836
+Underfull \hbox (badness 2781) in paragraph at lines 825--845
 $\OML/cmm/m/it/10 x$\OT1/ptm/m/n/10 is the s-tate ma-trix(containing real-time 
 car pose and
  []
@@ -576,18 +580,18 @@ Package epstopdf Info: Source file: <pic/fig9_Optimize.eps>
 (epstopdf)                    size: 13695 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig9_Optimize-eps-conve
 rted-to.pdf pic/fig9_Optimize.eps>
-(epstopdf)             \includegraphics on input line 847.
+(epstopdf)             \includegraphics on input line 856.
 Package epstopdf Info: Output file is already uptodate.
 <pic/fig9_Optimize-eps-converted-to.pdf, id=136, 592.2125pt x 458.71375pt>
 File: pic/fig9_Optimize-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pic/fig9_Optimize-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig9_Optimize-eps-converted-to.pdf used on input l
-ine 847.
+ine 856.
 (pdftex.def)             Requested size: 205.26234pt x 158.99377pt.
 
 
-LaTeX Warning: Reference `??' on page 5 undefined on input line 860.
+LaTeX Warning: Reference `??' on page 5 undefined on input line 872.
 
 [5]
 
@@ -597,7 +601,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.877 \includegraphics[height = 1.2in]{pic/404}
+l.886 \includegraphics[height = 1.2in]{pic/404}
                                                
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -611,7 +615,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.885 \includegraphics[height = 1.2in]{pic/404}
+l.894 \includegraphics[height = 1.2in]{pic/404}
                                                
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -625,7 +629,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.901 \includegraphics[height = 1.2in]{pic/404}
+l.918 \includegraphics[height = 1.2in]{pic/404}
                                                
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -639,7 +643,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.909 \includegraphics[height = 1.2in]{pic/404}
+l.926 \includegraphics[height = 1.2in]{pic/404}
                                                
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -653,7 +657,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.932 \includegraphics[height = 1.2in]{pic/404}
+l.947 \includegraphics[height = 1.2in]{pic/404}
                                                
 I could not locate the file with any of these extensions:
 .png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
@@ -661,7 +665,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 938--940
+Underfull \hbox (badness 10000) in paragraph at lines 953--955
 
  []
 
@@ -700,24 +704,19 @@ Package natbib Warning: There were undefined citations.
 
 [7]
 (C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
-emantic_vslam_parking.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+emantic_vslam_parking.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3477 strings out of 495354
- 52942 string characters out of 3183859
- 121516 words of memory out of 3000000
- 6590 multiletter control sequences out of 15000+200000
+ 3523 strings out of 495354
+ 53586 string characters out of 3183859
+ 121395 words of memory out of 3000000
+ 6631 multiletter control sequences out of 15000+200000
  43863 words of font info for 81 fonts, out of 3000000 for 9000
  17 hyphenation exceptions out of 8191
- 40i,8n,28p,468b,324s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,9n,28p,468b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
 i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MiKTe
@@ -727,7 +726,7 @@ C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/t
 ype1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:
 /CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on semantic_vslam_parking.pdf (7 pages, 1563536 bytes).
+Output written on semantic_vslam_parking.pdf (7 pages, 1563882 bytes).
 PDF statistics:
  218 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
