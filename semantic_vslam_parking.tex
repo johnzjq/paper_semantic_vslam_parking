@@ -472,11 +472,8 @@ However, they often require high frame rate and are susceptible to global illumi
 
 Moreover, the performances of direct SLAM systems also depend on a good map initialization.\citep{Younes2016A}\citep{Horizon DSO}
 Most importantly, the re-localization based on pre-built dense map is not trivial since most direct methods are more like visual odometries rather than slam systems\citep{Engel2014LSD}.
-
-
-(Huang:In LSD SLAM，it is said that most dense method is simply a VO, while LSD has loop closure procedure. 
-However, LSD itself do not have a map read and write module, but the LSD paper and the survey(Younes2016A) didn't mention this. Also since the direct method is not robust to illumination changes, re-localization using a pre-built map is of course almost unrealistic.)
-
+\COMMENT{Yewei:In LSD SLAM, it is said that most dense method is simply a VO, while LSD has loop closure procedure. 
+However, LSD itself do not have a map read and write module, but the LSD paper and the survey(Younes2016A) didn't mention this. Also since the direct method is not robust to illumination changes, re-localization using a pre-built map is of course almost unrealistic.}
 %LSD & SVO:random initialization,DSO:ransac-like method, inspired by LSD
 Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
 
@@ -510,7 +507,7 @@ These methods modeled the optimization problem as a Markov Chain, thus can provi
 However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
 Probability filters have many further extensions such as UKF \citep{martinez2005unscented}, Information filter\citep{thrun2005multi}, particle filter\citep{montemerlo2007fastslam}\citep{montemerlo2002fastslam} etc.
 However, they all assume the conditional independence of the current measurement with the historical states, which restricts the SLAM into a predict-update iteration loop.
-Inspired by the bundle adjustment research(Huang:a sfm with BA, or BA theory or both?) \citep{}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{Thrun2006The}.
+Inspired by the bundle adjustment research\citep{Bundle Ajustment A Modern Synthesis}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{Thrun2006The}.
 The graph-based optimization method is closely related to a Markov random field model, thus can involve the influence of all historical measurements, which together with its flexibility enable the Graph SLAM became the most popular SLAM method\citep{why filters}.  
 
 % Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
@@ -519,7 +516,10 @@ The graph-based optimization method is closely related to a Markov random field 
 % review of VSLAM
 Generally VSLAM methods fall into two groups, so called feature-based methods (the indirect methods) and direct methods. 
 In feature-based methods, low-level features are detected and treated as landmarks. 
-To prevent integrating all the features into the factor graph\COMMENT{John:should use correct expression from PTAM}, PTAM\cite{Klein2007Parallel} separates tracking and mapping into two sub-tasks, keyframes are extracted and used in optimization, but because of what?? it still works in small areas(a desk or a room corner). 
+%PTAM:If these two processes are separated, tracking is no longer probabilisti- cally slaved to the map-making procedure, and any robust tracking method desired can be used
+%PTAM:Finally, the system is not designed to close large loops in the SLAM sense. 
+To emancipate tracking from the map-making procedure probabilistically, PTAM\cite{Klein2007Parallel} separates tracking and mapping into two sub-tasks.
+Keyframes are extracted and used in optimization, but the system cannot deal with large loop closures, it can only handle tasks in small areas(a desk or a room corner). 
 \cite{Lategahn2012City} and \cite{Lategahn2014Vision} build city-scale sparse maps using G2O, a graph optimization framework\citep{K2011G2o}. 
 Nevertheless, the optimization of sparse 3D point cloud is time-consuming, so the off-line mapping procedure is a must. Built on the idea of PTAM\cite{Klein2007Parallel}, ORB-SLAM \cite{Mur2017ORB} offers stable and efficient graph-based VSLAM system.
 With the keyframe detection and the BoW-empowered fast loop closure detection, ORB-SLAM performs well in various indoor and outdoor environments. 
@@ -530,9 +530,9 @@ However, ORB-SLAM is still easy to fail in texture-less environments.
 Because feature-based methods are only capable of creating sparse feature-based mapping, they cannot be directly used in applications where full reconstruction is demanded, e.g. AR or structure from motion.
 Direct methods based on photometric error and utilize all image pixels are proposed \citep{Engel2014LSD}.
 Comparing to sparse feature-based methods, direct methods can output a semi-dense point cloud with higher quality at a real time speed. 
-But in practice, direct methods require high rate of overlapping between consequent frames and high frame rate is also necessity since (to be filled) to estimate the depth accurately.
+But in practice, direct methods require high rate of overlapping between consequent frames, and high frame rate is also necessity since brightness consistency is crucial to estimate the depth accurately.
 Direct methods are also known to be vulnerable to motion blur, camera defocus and global illumination changes \cite{Newcombe2011DTAM}. 
-SVO \cite{Forster2013SVO} and DSVO\cite{} combine advantages of feature-based method and direct method, and runs extremely fast (100 Hz). 
+SVO \cite{Forster2013SVO} and DSVO \cite{} combine advantages of feature-based method and direct method, and runs extremely fast (100 Hz). 
 However, lacking of loop closure detection, these odometric methods drifts as time increases and gets lost easily.
 	
 % Review of Semantic slam
@@ -556,6 +556,8 @@ Therefore, more descriptive landmarks, especially landmarks attached with semant
 %not a good conclusion, i will revise the state of the art later.
 %ADD review of robust methods?
 \COMMENT{JOHN add review of robust method or include this in the approach?}
+
+\COMMENT{YEWEI: what is considered a robust method?}
 \section{approach}
 
 Our semantic VSLAM system includes four fisheye cameras and one monocular camera. 
@@ -583,9 +585,13 @@ The change of steering wheel angle, as well as the vehicle speed and heading dir
 %
 
 We choose parking slot as the landmark since parking slots are the most distinguishable objects in a parking lot, and the precise locations of parking slots are informative for localization and navigation during autonomous parking.
-Our parking slot detector is based on \citep{Li2017Vision}, in which corner points of parking slots are detected and classified (\Reffig{fig:4}).
-Afterwards, parking slots are assembled according to the corner points (\Reffig{fig of parking slots assemble}).
-Although the CNN-based method is capable of detection  most kinds of corner points fast and robust, the exact shape of the parking slot cannot be known due to the limited visible range of the surround vision system.
+Our parking slot detector is based on \citep{Li2017Vision}, in which corner points of parking slots are detected (\Reffig{fig:4}).
+
+\COMMENT{Yewei:Parking slots are not classified until the parking slots hypothesis check, and the "T" type is quite hard to be classified to pattern (a) or (b) in Fig.7 of \citep{Li2017Vision}
+Fig. 5 in \citep{Li2017Vision} is to illustrate the training examples of corner detection procedure.}
+
+Afterwards, parking slots are assembled according to the image patterns around corner points (\Reffig{fig of parking slots assemble}).
+Although the CNN-based method is capable of detection most kinds of corner points fast and robust, the exact shape of the parking slot cannot be known due to the limited visible range of the surround vision system.
 As a result, the parking slot can only be guess initially and we have to optimize the shape of the parking slots in the SLAM system.
 Furthermore, the ID of each parking slot should be detected for facilitating data association between parking slots, which will be elaborated in %\sec{}.
 
@@ -664,7 +670,7 @@ The observation between four sub-landmarks of a slot and vehicle position is als
 %
 
 ID of a parking slot is important for the association of this semantic landmark.
-We fine turned PVANet to detect each character in one ID \citep{Hong2016PVANet}.
+We fine tuned PVANet to detect each character in one ID \citep{Hong2016PVANet}.
 The entrance-line of the parking slot is firstly utilized to roughly locate the ID, as shown in \Reffig(??).
 Then the image patches are extracted and send to the CNN (\Reffig(??)).
 Due to the distorted and blurred texture in the surround view image, even the latest detection network could not offer the satisfactory performance.
@@ -762,6 +768,7 @@ The overall pipeline of the offline optimization stage
 \subsubsection{Offline Optimization Framework}
 \COMMENT{John: should we seperate offline and online }
 
+\COMMENT{Yewei: EKF is needed since G2O offers unstable results at the corners before the loop closure, and the offline map is not usable for G2O unless you set all the landmarks fixed ,or read all the pre-stored edges before starting the system.}
 % In this section, a map of parking slots is built by fusing all the observation datum collected in the former sections. 
 % The accumulated error of IMU may cause drifting in localization. 
 % To avoid these problems, we use the popular g2o\cite{K2011G2o} framework together with the max-mixture model \cite{Pfingsthorn2014Representing} to optimize both car and landmarks positions and ensure correct data association in the offline section, the figure above give the overall view of the optimization step.
