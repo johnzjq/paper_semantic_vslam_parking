@@ -400,7 +400,7 @@ However, most indoor parking lots are composed of monotonous texture-less scenes
 In this paper, we proposed a novel and practical solution of real-time indoor localization for autonomous driving in parking lots.
 High level landmarks, the parking slots, are extracted and enriched with labels to avoid the instability of low-level visual features.
 We then proposed a robust method for detecting incorrect data associations between parking slots and further extended traditional optimization framework by dynamically eliminating suboptimal data associations.
-Visual fiducial Tags are also introduced to improve the overall precision.
+Visual fiducial markers are introduced to improve the overall precision.
 Their number and distribution are also analyzed and compared.
 As a result, a semantic map of parking lot can be established fully automatically and robustly.
 We experimented the performance of real-time localization based on the map using our autonomous driving platform TiEV and the average accuracy of 0.3m tracking tracing can be achieve at a speed of 10kph.
@@ -452,9 +452,9 @@ However, parking in a large indoor parking lot without human interfere is still 
 One critical reason is the lack of robust high precision localization mean in these GNSS forbidden area.
 Traditional indoor localization methods require pre-equipment sensors, such as WiFi, Bluetooth or UWB. 
 Wireless signal suffers from occlusion and decays while user’s distance to signal sources increases, so a significant number of stations are needed for stability, let alone their relative low precision\citep{WIFI bluetooth UWB}. 
-Laser-based SLAM system is eligible for localization an unmanned vehicle in environments such as a factory or a warehouse\citep{REFERNCE}.
+Laser-based SLAM (simultaneously localization and mapping) system is eligible for localization an unmanned vehicle in environments such as a factory or a warehouse\citep{REFERNCE}.
 However, these range based representation is of high data volume and is vulnerable to dynamic scenes.
-As a result, visual SLAM (VSLAM) built on low-cost cameras became one of the most favorable localization method.
+As a result, visual SLAM (VSLAM) built on low-cost cameras became one of the most favorable localization methods.
 
 %
 
@@ -469,13 +469,13 @@ The direct methods estimate camera poses directly based on photometric error der
 %SVO:"Direct methods that exploit all the information in the image, even from areas where gradients are small, have been shown to outperform feature-based methods in terms of robustness in scenes with little texture [14] or in the case of camera- defocus and motion blur [15]."
 However, they often require high frame rate and are susceptible to global illumination change, which restrict their usage in unevenly illuminated indoor parking lot\citep{Younes2016A}. 
 %Younes2016A:Nevertheless, direct methods are susceptible to failure when scene illumination changes occur as the minimization of the photometric error be- tween two frames relies on the underlying assumption of the brightness consistency constraint 
-
-Moreover, the performances of direct SLAM systems also depend on a good map initialization.\citep{Younes2016A}\citep{Horizon DSO}
-Most importantly, the re-localization based on pre-built dense map is not trivial since most direct methods are more like visual odometries rather than slam systems\citep{Engel2014LSD}.
-\COMMENT{Yewei:In LSD SLAM, it is said that most dense method is simply a VO, while LSD has loop closure procedure. 
-However, LSD itself do not have a map read and write module, but the LSD paper and the survey(Younes2016A) didn't mention this. Also since the direct method is not robust to illumination changes, re-localization using a pre-built map is of course almost unrealistic.}
+%Moreover, the performance of direct SLAM systems depends on a good map initialization.\citep{Younes2016A}\citep{Horizon DSO}
+Most importantly, the re-localization based on pre-built dense map is not trivial since illumination can vary during revisiting.
+Therefore, most direct VSLAM methods are rather visual odometries\citep{Engel2014LSD}.
+%\COMMENT{Yewei:In LSD SLAM, it is said that most dense method is simply a VO, while LSD has loop closure procedure. 
+%However, LSD itself do not have a map read and write module, but the LSD paper and the survey(Younes2016A) didn't mention this. Also since the direct method is not robust to illumination changes, re-localization using a pre-built map is of course almost unrealistic.}
 %LSD & SVO:random initialization,DSO:ransac-like method, inspired by LSD
-Therefore, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
+As a result, more stable and legible visual landmarks which are immune to various illuminate condition are demanded.
 
 %
 
@@ -489,10 +489,10 @@ Therefore, more stable and legible visual landmarks which are immune to various 
 % However, most semantic labels helps little in localization stage, while the image segmentation and classification work cost much time. 
 % The full use of semantic information is still a unsolved problem.
 	
-As a typical kind of semantic landmarks in parking lots, parking-space is now a favour for researchers
+As a typical kind of semantic landmarks in parking lots, parking slot is now a favour for researchers
 \citep{Houben:2015hq} \citep{Grimmett2015Integrating} \citep{Himstedt2017Online}.
 Recently, deep learning-based method show its capability of  accurate and robust detection of such kind of meaningful objects \citep{zhanglin}. 
-Inspired by these methods, we present an robust VSLAM system based on the recognition of high level landmarks for parking, i.e. parking-spaces and their IDs. 
+Inspired by these methods, we present an robust VSLAM system based on the recognition of high level landmarks for parking, i.e. parking slots and their IDs. 
 Limited visual fiducial markers are introduced for improving overall accuracy and robustness. 
 Facing the visual aliasing problem of parking slots, we proposed a robust outliers detection and elimination strategy in the optimization stage.
 Finally, a two dimensional map of parking slots can be robustly established which is distinguished from the traditional feature-based or point-cloud map for its stability, re-usability, light weight and human readable.
@@ -503,12 +503,14 @@ Our system is implemented on an autonomous driving vehicle and tested in real pa
 SLAM has long been a classic topic in the robotics field\citep{Cadena:2016fp} and recently became heated in the autonomous driving since there are areas where GNSS is not available.\citep{Bansal2015Analysis}. 
 %past,present,furture:The popularity of the SLAM problem is connected with the emergence of indoor applications of mobile robotics.
 \citet{Davison2003Real} \citet{Davison2007MonoSLAM} and \citet{Civera20101} use Extended Kalman Filter(EKF) to simultaneously optimize the sensor and landmarks positions in real-time. 
-These methods modeled the optimization problem as a Markov Chain, thus can provided promising localization results with high efficiency.
-However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
+%These methods modeled the optimization problem as a Markov Chain, thus can provided promising localization results with high efficiency.
+However, the computation grows quadratically with the number of landmarks\cite{Bailey2006Simultaneous}.
+%, so these methods are bounded in room-sized domains when regarding visual features as landmarks.
 Probability filters have many further extensions such as UKF \citep{martinez2005unscented}, Information filter\citep{thrun2005multi}, particle filter\citep{montemerlo2007fastslam}\citep{montemerlo2002fastslam} etc.
 However, they all assume the conditional independence of the current measurement with the historical states, which restricts the SLAM into a predict-update iteration loop.
+\COMMENT{JOHN to be more rigorous}
 Inspired by the bundle adjustment research\citep{Bundle Ajustment A Modern Synthesis}, a factor graph based optimization framework (known as Graph SLAM) was proposed \citep{Thrun2006The}.
-The graph-based optimization method is closely related to a Markov random field model, thus can involve the influence of all historical measurements, which together with its flexibility enable the Graph SLAM became the most popular SLAM method\citep{why filters}.  
+This method is closely related to a Markov random field model, thus can involve the influences of all historical measurements, which together with its flexibility enable the Graph SLAM became the most popular SLAM method\citep{why filters}.  
 
 % Due to the topological relation among the series of poses and landmarks, other methods(known as Graph SLAM) present them as a factor graph and optimize it with a linear solver locally or globally. 
 % Going through classical age and algorithmic-analysis age \cite{Cadena:2016fp} \cite{Bailey2006Simultaneous}, now the association of metric and semantic map and the system performance in specific environment are the main focus in SLAM field. 
@@ -541,23 +543,24 @@ Traditional SLAM methods do not incorporate human understandable meanings (seman
 \cite{Cadena:2016fp}. \cite{Li2016Semi} added semantic labels to a LSD-SLAM framework to construct a dense map with classes attached to geometric entities, but semantic labels helps little in the optimization or localization stages.
 SLAM++ \cite{Salas2013SLAM} and Semantic Fusion \cite{Mccormac2017SemanticFusion} employed semantic labels in the RGBD SLAM framework to aid the loop closure. 
 However, both methods...
+In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in large indoor shopping spaces.
+\cite{Grimmett2015Integrating} and \cite{Himstedt2017Online} reconstruct the metric map and the semantic map of parking lot, which helps the route planning and parking task.
+\COMMENT{!!semantics in VW paper(2015) is not used in SLAM at all, not sure about the second one }
 
 \COMMENT{JOHN!!should be very clear about the defects of these methods, i.e. 3D objects? not precise regarding to the localization of objects? can be confusing when multiple objects are searched?}
 
-In \cite{Wang2015Lost}, shop names and shop facades are recognized as labels in large indoor shopping spaces. 
-\cite{Houben:2015hq} detects parking lots from the (fixed IP camera?) top view image, and use detected lots to estimate camera poses (is this a slam?).
-
-\cite{Grimmett2015Integrating} and \cite{Himstedt2017Online} reconstruct the metric map and the semantic map of parking lot, which helps the route planning and parking task.
-(!!semantics in VW paper(2015) is not used in SLAM at all, not sure about the second one )
+ 
+%\cite{Houben:2015hq} detects parking lots from the (fixed IP camera?) top view image, and use detected lots to estimate camera poses (is this a slam?).
 
 % conclusion of the review part
 In a short conclusion, existing VSLAM methods generally could not perform robustly in texture-less area like an indoor parking lot.
 Therefore, more descriptive landmarks, especially landmarks attached with semantics should be used instead of low level feature in such a scenario.
 %not a good conclusion, i will revise the state of the art later.
 %ADD review of robust methods?
-\COMMENT{JOHN add review of robust method or include this in the approach?}
+%\COMMENT{JOHN add review of robust method or include this in the approach?}
 
 \COMMENT{YEWEI: what is considered a robust method?Max-mixture...}
+yes, a short paragraph 
 \section{approach}
 
 Our semantic VSLAM system includes four fisheye cameras and one monocular camera. 
@@ -587,13 +590,14 @@ The change of steering wheel angle, as well as the vehicle speed and heading dir
 We choose parking slot as the landmark since parking slots are the most distinguishable objects in a parking lot, and the precise locations of parking slots are informative for localization and navigation during autonomous parking.
 Our parking slot detector is based on \citep{Li2017Vision}, in which corner points of parking slots are detected (\Reffig{fig:4}).
 
-\COMMENT{Yewei:Parking slots are not classified until the parking slots hypothesis check, and the "T" type is quite hard to be classified to pattern (a) or (b) in Fig.7 of \citep{Li2017Vision}
-Fig. 5 in \citep{Li2017Vision} is to illustrate the training examples of corner detection procedure.}
+\COMMENT{What is the purpose of the following sentences? should be moved to the next section?}
+Fig. 5 in \citep{Li2017Vision} illustrates the training examples of corner detection procedure.
+Parking slots are not classified until the parking slots hypothesis check, and the "T" type is quite hard to be classified to pattern (a) or (b) in Fig.7 of \citep{Li2017Vision}
 
 Afterwards, parking slots are assembled according to the image patterns around corner points (\Reffig{fig of parking slots assemble}).
 Although the CNN-based method is capable of detection most kinds of corner points fast and robust, the exact shape of the parking slot cannot be known due to the limited visible range of the surround vision system.
 As a result, the parking slot can only be guess initially and we have to optimize the shape of the parking slots in the SLAM system.
-Furthermore, the ID of each parking slot should be detected for facilitating data association between parking slots, which will be elaborated in %\sec{}.
+Furthermore, the ID of each parking slot should be detected for facilitating data association between parking slots, which will be elaborated in \Refsec{sec:recognition}.
 
 %
 
@@ -601,18 +605,20 @@ Another kind of landmark used in our system is visual fiducial markers.
 % Two kinds of significant landmarks in the parking lots are used ——pillars(represented by visual markers) and parking lots. 
 Fiducial markers are introduced as an aid for the constancy of localization since few parking lot is detected near the entrances and exits. 
 %(John:but we put the markers in the inner path of two rings?)
-In the practice, we find that loop closure using only parking slots is not robust enough, so visual markers are also placed where there is a high revisiting-rate.
-Fiducial markers may not be fully prohibited but their number can be limited to a small amount. 
+%In the practice, we find that loop closure using only parking slots is not robust enough, so visual markers are also placed.
+% where there is a high revisiting-rate.
+In our study, we found fiducial markers may not be fully prohibited but their number can be limited to a small amount. 
 We select AprilTags as visual markers for its robustness and high efficiency(a frame rate of 10 Hz)\citep{Olson2011AprilTag}.
 % Parking lots are detected from the top-view image with the state of art CNN based parking lot recognition method \cite{Li2017Vision}. 
 % Once the four corner points are extracted, the Parking ID, which acts as an aid for the further parking task, can be determined quickly using priori knowledge.
 
 \subsection{CNN based Parking slot Recognition}
+\label{sec:recognition}
 
 We adopt the method proposed by \citep{Li2017Vision} to detect parking slots.
 %
 
-\COMMENT{John: Donot repeat existing method, briefly describe the detection method and emphasize on the post processing if there is any and the ID detection}
+%\COMMENT{John: Donot repeat existing method, briefly describe the detection method and emphasize on the post processing if there is any and the ID detection}
 
 
 %(John: Donot repeat existing method, briefly describe the detection method and emphasize on the post processing if there is any and the ID detection)
@@ -655,17 +661,19 @@ We adopt the method proposed by \citep{Li2017Vision} to detect parking slots.
 % \end{figure}
 % The final step is to remove the miss-detected entrance-line, like $\overrightarrow{{P}_{1}{P}_{3}}$in Fig 5.
 %
-The raw detection results from the previous method are still not precise. 
-We remove the entrance-line candidate who has more than two marking-point patterns on it to avoid this situation.  
-Extremely large or small candidates are also discarded as all slots are around the same size.
-Once a parking-line is detected, the direction of a lot is determined as well. And the “depth” of a parking lot is known a prior knowledge. 
+%The raw detection results from the previous method are still not precise. 
+We further optimize the results by firstly removing the entrance-line candidate who has more than two marking-point patterns on it to avoid this situation\COMMENT{what do u mean?}.  
+Secondly, extremely large or small candidates are also discarded as all slots are around the same size.
+Once a parking-line is detected, the direction of a lot is determined as well. 
+And the “depth” of a parking lot is known a prior knowledge.\COMMENT{what do u mean?} 
 
-Since the relative car coordinate overlaps the top-view image coordinate, the slot coordinate in the top-view image is the same as that in the vehicle relative coordinate, and thus, we only need to perform a scale transformation.
+%Since the relative car coordinate overlaps the top-view image coordinate, the slot coordinate in the top-view image is the same as that in the vehicle relative coordinate, and thus, we only need to perform a scale transformation.
 %
 %(John: ADD how to parameterize the parking slot, if we planned to optimize the shape of a parking slot? )
-To optimize a slot's shape as well as its coordinate, a slot is stored as four landmarks other than one.
-Each landmark is connected with other three ones with a rectangular constrain(\Reffig(??)), which consists of an angular constraint of high confidence and a distance constraint with a relatively lower confidence.
-The observation between four sub-landmarks of a slot and vehicle position is also applied to connect the slot to the global map.
+Since the corners of a parking slot are not fully observable.
+To optimize a slot's shape as well as its position, a slot is represented by four points other than one.
+Each point is connected with other three ones with a rectangular constrain(\Reffig(??)), which consists of an angular constraint of high confidence and a distance constraint with a relatively lower confidence.
+The observation between four point of a slot and vehicle position is also applied to connect the slot to the global map.
 
 %
 
@@ -674,7 +682,7 @@ We fine tuned PVANet to detect each character in one ID \citep{Hong2016PVANet}.
 The entrance-line of the parking slot is firstly utilized to roughly locate the ID, as shown in \Reffig(??).
 Then the image patches are extracted and send to the CNN (\Reffig(??)).
 Due to the distorted and blurred texture in the surround view image, even the latest detection network could not offer the satisfactory performance.
-As a result, we devised a semantic-based fuzzy association method to cope with the uncertainty, which will be detailed in \ref{section optimization}.  
+As a result, we devised a semantic-assisted association method to cope with the uncertainty, which will be detailed in \Refsec{sec:optimization}.  
 
 % Lot IDs are also recognized basing on the priori knowledge of parking lots since IDs are always located in the center of the entrance-line. 
 % We fine tuning the PVANet\cite{Hong2016PVANet} to detect IDs. 
@@ -702,7 +710,7 @@ Recalling the goal of our robustly localization system for autonomous driving an
 We adopted AprilTag and employed the detection framework from the AprilTag C source Open Library \footnote{https://april.eecs.umich.edu/wiki/AprilTags}\cite{Olson2011AprilTag}.
 We further solved the relative position between visual markers and the vehicle by the PnP model in a fast and accurate way \cite{Hartley2003Multiple}. 
 
-\COMMENT{John: Can we improve the efficient or the accuracy when localization a tag?}
+%\COMMENT{John: Can we improve the efficient or the accuracy when localization a tag?}
 % Every tag texture indicates a unique ID, so tag data association is always correct.
 
 \begin{figure}
@@ -716,19 +724,21 @@ An example of the relationship between a detected tag in the image plane(left fi
 In the PnP model, we assume four corner points of the tag always lie on the same plane, and thus definite the hypothetical 3D tag coordinate(whose origin is a tag’s geometrical center, x axis and y axis are both parallel to tag’s edge, pointing rightward and upward respectively, and z axis is perpendicular to the tag plane, pointing inward). 
 So the relationship between the tag corner in the image and that in the hypothetical 3D tag coordinate can be described as,
 ${R}_{3 \times 3} \cdot {{K}_{3 \times 3}}^{-1} \cdot {x}_{3 \times 1}+{t}_{3 \times 1}={X}_{3 \times 1}$
-where ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ is the relative rotation and translation vector, 
+where ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ are the relative rotation and translation vector, 
 ${K}_{3 \times 3}$ is the intrinsic camera matrix, 
 ${X}_{3 \times 1}$ is the coordinate in the hypothetical 3D tag coordinate and ${x}_{3 \times 1}$ is the homogeneous coordinate in the image plane. 
-${X}_{3 \times 1}$ and ${K}_{3 \times 3}$ are prior knowledge, 
-and ${x}_{3 \times 1}$ has already been detected. 
-Only ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ are unknown parameters with 6 DOF, more than 3 corresponding points are needed for iteration. 
+%${X}_{3 \times 1}$ and ${K}_{3 \times 3}$ are prior knowledge, and ${x}_{3 \times 1}$ has already been detected. 
+%Only ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ are unknown parameters with 6 DOF, more than 3 corresponding points are needed for iteration. 
 
 %Once ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ is calculated, the Rodrigues transformation is performed on ${R}_{3 \times 3}$ to separate the angle($\alpha$) bonded by the array starts from the tag to the north and the array starts from the tag center to the vehicle. 
-In experiment, we find ${R}_{3 \times 3}$ given by PnP method cannot always meet our demands in accuracy.
+In the experiment, we find ${R}_{3 \times 3}$ given by PnP method is not accurate enough, since \COMMON{what...}
+%cannot always meet our demands in accuracy.
 So we discard ${R}_{3 \times 3}$ and get angle directly from the calibrated image.
 As shown in(\Reffig(??)), the angle($\alpha$) can simply be calculated by $\alpha = \arctan((x_i - x_0) / f)$, where $x_i$ and $x_0$ denote the x coordinate value of the tag centre and the principle point respectively, and f is the focal length.
 The distance($d$) is the 2-norm of ${t}_{3 \times 1}$ . 
 So the tag locates at $( x=sin(a) \cdot d, y=cos(a) \cdot d)$ in the vehicle relative coordinate.
+
+%
 
 These visual fiducial markers are flexible and easily implemented.
 They brought another benefit for the autonomous parking purpose, that fiducial markers can easily indicate the existences of pillars and walls which can only be robustly detected by expensive laser scanners.
@@ -740,17 +750,31 @@ These obstacle information can facilitate the route planning inside of a parking
 % Visual markers, which present pillar-walls are introduced for its robustness and high efficiency.
 
 \subsection{Optimization}
+\label{sec:optimization}
 \subsubsection{Optimization Pipeline}
-False positives occur in both detection and data association of parking slots, and affect map and localization result greatly.
-In front-end part, several methods have successfully lowered the slot detection error, while wrongly associated slots still cannot be detected.
-Thus, error detection and fixation in slot detection and association should be performed in both front-end and back-end.
+we adopt a Graph-based optimization back-end.
+However, due to fallible detection of parking slots and their ids from low-quality surround vision images, ambiguities will be presented during data association, which greatly affect the mapping and localization.
+%False positives occur in both detection and data association of parking slots, and affect map and localization greatly.
+%In front-end part, several methods have successfully lowered the slot detection error, while wrongly associated slots still cannot be detected.
+Thus, correct association should be ensured and wrong ones should be detected and discarded in the optimization.
+These are performed at both front-end and at back-end.
+%error detection and fixation in slot detection and association should be performed in both front-end and back-end.
 
-At every frame, the relative car-landmark position(including the slots and visual markers), together with the speed and angular changes of vehicle are collected to the parking map incrementally. 
-These values are achieved from a Kalman-based extrapolator with the steering wheel, car speed and the compass readings from a cheap IMU as the inputs.
-Parking slot observations are pre-associated roughly through their ids and the nearest neighbour search.
-However, due to fallible detection of parking slots and their ids from low-quality surround vision images, ambiguities will be presented during data association.
-Max-Mixture is therefore introduced and improved to not only detect but also correct mistaken associations.
-And the overall of the optimization pipeline is shown in \Reffig{fig:5}. 
+At every frame, parking slot observations are pre-associated through their ids and the nearest neighbour search.
+
+\COMMENT{add association method by IDs, introducing some metric such as semantic distance?}
+
+The nearest neighbour is based on the relative offsets between landmarks, which is derived 
+%the relative car-landmark position(including the slots and visual markers), together with the speed and angular changes of vehicle are collected to the parking map incrementally. 
+%These values are achieved 
+from a Kalman-based extrapolator with the steering wheel, car speed and the compass readings from a cheap IMU as the inputs.
+
+%
+
+We further added the pre-associated landmarks into our graph model based on a Max-Mixture model\citep{Pfingsthorn2014Representing}.
+% is therefore introduced and improved to not only detect but also correct mistaken associations.
+%And 
+The overall of the optimization pipeline is shown in \Reffig{fig:5}. 
 
 \begin{figure}
 \centering
@@ -764,21 +788,24 @@ The overall pipeline of optimization
 % In this section, a map of parking slots is built by fusing all the observation datum collected in the former sections. 
 % The accumulated error of IMU may cause drifting in localization. 
 % To avoid these problems, we use the popular g2o\cite{K2011G2o} framework together with the max-mixture model \cite{Pfingsthorn2014Representing} to optimize both car and landmarks positions and ensure correct data association in the offline section, the figure above give the overall view of the optimization step.
-\citep{K2011G2o} offers a global framework for nonlinear least square problems. 
-Under the G2O framework, all the elements to be optimized are regarded as vertices, while all the observation constraints are known as edges who connect vertices. 
-In our method all the observations of parking slots and fiducial markers are treated as edges in the graph. 
+We adopted G2O \citep{K2011G2o} in our method.
+%offers a global framework for nonlinear least square problems. 
+%Under the G2O framework, 
+%All the elements to be optimized are regarded as vertices, while all the observation constraints are known as edges who connect vertices. 
+%In our method all the observations of parking slots and fiducial markers are treated as edges in the graph. 
 % Observations from vehicle to tag or vehicle are presented by G2O standard edges. 
-However, ambiguity raised from observations of parking slots as well as parking ids lead to erroneous data associations and generate fatal residual error in the optimization. 
+%However, ambiguity raised from observations of parking slots as well as parking ids lead to erroneous data associations and generate fatal residual error in the optimization. 
 
-Several robust optimization extensions exist, in the paper, max mixture models\citep{Pfingsthorn2014Representing} are introduced to detect and eliminate the mistaken associations.
+%Several robust optimization extensions exist, in the paper, max mixture models\citep{Pfingsthorn2014Representing} are introduced to detect and eliminate the mistaken associations.
 % ID detection error is inevitable, so max mixture models \cite{Pfingsthorn2014Representing} are 
 % introduced to eliminate the mistaken associations.
-The original least square problem of graph optimization can be expressed by the following equation:
-
-\COMMENT{John: abbreviate the explanation of the g2o, but should add the robust method and emphasize on our contributions}
-
-$F(x)=\sum\limits_{k \in C}e_k{(x_k,z_k)}^T{\Omega}_k e_k(x_k,z_k)$\cite{K2011G2o}\\
-$x^{*} = \mathop{argminF(x)}\limits_x$\cite{K2011G2o}\\
+The least square problem of graph optimization can be expressed by the following equation:
+\[
+F(x)=\sum\limits_{k \in C}e_k{(x_k,z_k)}^T{\Omega}_k e_k(x_k,z_k)
+\]
+\[
+x^{*} = \mathop{argminF(x)}\limits_x
+\]
 where $C$ denotes the total ID group; 
 $x_k$is the parameter block of the $k$Th vertex(containing the vertex’s location and direction), $z_k$ and $\Omega_k$ is the mean and covariance of the $k$Th edge; 
 $e_k(x_k,z_k)$ measures how well $x_k$ matches $z_k$. 
@@ -804,7 +831,8 @@ Since every parking slots may be wrongly associated or detected, it's impractica
 % During the online stage, the former parking map acts as the initial map, and is updated simultaneously with the extended Kalman filter(EKF). 
 % This results in a smoother trajectory, which helps the further control task.
 
-\COMMENT{Yewei: highlight, comparing to the traditional methods, why semantic, how outliers}
+%\COMMENT{Yewei: highlight, comparing to the traditional methods, why semantic, how outliers}
+%TODO
 \subsubsection{Outliers elimination using Max-Mixture Model}
 As is mentioned above, classical graph optimization method using uni-model Gaussian is sensitive to outliers, and fails when there are wrongly associated datum in graphs.
 Several robust methods\citet{maxmixture} \citet{Switchable Constrain} \citet{RRR} have been proposed for pose graph, but both poses and landmark positions are to optimize in our system. 

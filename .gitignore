@@ -1,3 +1,11 @@
+# latex auxilary files
+*.aux
+*.bbl
+*.blg
+*.log
+*.gz
+
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db

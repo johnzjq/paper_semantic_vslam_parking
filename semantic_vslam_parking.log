@@ -1,13 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.3.21)  19 DEC 2017 18:15
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2016.8.21)  29 DEC 2017 00:12
 entering extended mode
- \write18 enabled.
- %&-line parsing enabled.
-**semantic_vslam_parking
-(./semantic_vslam_parking.tex
-LaTeX2e <2015/01/01>
-Babel <3.9l> and hyphenation patterns for 79 languages loaded.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/IEEEtran/IEEEtran.cls
-Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
+**C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/
+semantic_vslam_parking.tex
+
+(C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/s
+emantic_vslam_parking.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for loaded.
+(C:\CTEX\UserData\tex\latex\ieeetran\IEEEtran.cls
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
 \@IEEEtrantmpdimenA=\dimen102
@@ -17,9 +18,9 @@ Document Class: IEEEtran 2014/09/17 V1.8a by Michael Shell
 \@IEEEtrantmpcountB=\count80
 \@IEEEtrantmpcountC=\count81
 \@IEEEtrantmptoksA=\toks14
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 458.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+(C:\CTEX\MiKTeX\tex\latex\psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -30,54 +31,54 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \CLASSINFOnormalsizeunitybaselineskip=\dimen107
 \IEEEnormaljot=\dimen108
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <17> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <20> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1090.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1039.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 1090.
 
 \IEEEquantizedlength=\dimen109
 \IEEEquantizedlengthdiff=\dimen110
@@ -110,86 +111,87 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \@IEEEquantizemultiple=\count92
 \@IEEEquantizeboxA=\box26
 \@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) (/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty
+) (C:\CTEX\UserData\tex\latex\natbib\natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip44
 \bibsep=\skip45
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count94
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty
+(C:\CTEX\MiKTeX\tex\latex\ltxmisc\url.sty
 \Urlmuskip=\muskip10
-Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks15
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+(C:\CTEX\MiKTeX\tex\latex\graphics\graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+(C:\CTEX\MiKTeX\tex\latex\graphics\trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(C:\CTEX\MiKTeX\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+(C:\CTEX\UserData\tex\latex\graphics-def\pdftex.def
+File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/message (HO)
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/04/18 v1.20 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count95
 ))
-\Gin@req@height=\dimen125
-\Gin@req@width=\dimen126
+\Gin@req@height=\dimen126
+\Gin@req@width=\dimen127
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
-\ex@=\dimen127
+\ex@=\dimen128
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen128
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen129
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+(C:\CTEX\MiKTeX\tex\latex\amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count96
-LaTeX Info: Redefining \frac on input line 210.
+LaTeX Info: Redefining \frac on input line 213.
 \uproot@=\count97
 \leftroot@=\count98
-LaTeX Info: Redefining \overline on input line 306.
+LaTeX Info: Redefining \overline on input line 375.
 \classnum@=\count99
 \DOTSCASE@=\count100
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box28
 \strutbox@=\box29
-\big@size=\dimen129
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\big@size=\dimen130
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \macc@depth=\count101
 \c@MaxMatrixCols=\count102
 \dotsspace@=\muskip11
@@ -200,30 +202,29 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \column@=\count106
 \maxfields@=\count107
 \andhelp@=\toks18
-\eqnshift@=\dimen130
-\alignsep@=\dimen131
-\tagshift@=\dimen132
-\tagwidth@=\dimen133
-\totwidth@=\dimen134
-\lineht@=\dimen135
+\eqnshift@=\dimen131
+\alignsep@=\dimen132
+\tagshift@=\dimen133
+\tagwidth@=\dimen134
+\totwidth@=\dimen135
+\lineht@=\dimen136
 \@envbody=\toks19
 \multlinegap=\skip47
 \multlinetaggap=\skip48
 \mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+(C:\CTEX\MiKTeX\tex\latex\graphics\color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+(C:\CTEX\MiKTeX\tex\latex\00miktex\color.cfg
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 142.
+Package color Info: Driver file: pdftex.def on input line 130.
 )
-(./semantic_vslam_parking.aux)
-\openout1 = `semantic_vslam_parking.aux'.
-
+(C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
+emantic_vslam_parking.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 314.
 LaTeX Font Info:    ... okay on input line 314.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 314.
@@ -238,28 +239,27 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 314.
 LaTeX Font Info:    ... okay on input line 314.
 
 -- Lines per column: 58 (exact).
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+(C:\CTEX\MiKTeX\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count108
-\scratchdimen=\dimen136
+\scratchdimen=\dimen137
 \scratchbox=\box30
 \nofMPsegments=\count109
 \nofMParguments=\count110
 \everyMPshowfont=\toks21
 \MPscratchCnt=\count111
-\MPscratchDim=\dimen137
+\MPscratchDim=\dimen138
 \MPnumerator=\count112
 \makeMPintoPDFobject=\count113
 \everyMPtoPDFconversion=\toks22
-) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
+) (C:\CTEX\MiKTeX\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/04/22 v0.16 Utilities of pdfTeX for LuaTeX (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -268,37 +268,35 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\grfext.sty
+Package: grfext 2010/08/19 v1.1 Managing graphics extensions (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Defining keys (HO)
 ))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+(C:\CTEX\MiKTeX\tex\latex\oberdiek\kvoptions.sty
+Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\kvsetkeys.sty
+Package: kvsetkeys 2011/04/07 v1.13 Key value parser (HO)
 
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+(C:\CTEX\MiKTeX\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Prefix for e-TeX command names (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+34.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
+)
 
 Package natbib Warning: Citation `DARPA WAYMO' on page 1 undefined on input lin
 e 450.
@@ -327,322 +325,151 @@ Package natbib Warning: Citation `VW paking' on page 1 undefined on input line
 463.
 
 
-Package natbib Warning: Citation `Engel2017Direct' on page 1 undefined on input
- line 466.
-
-
-Package natbib Warning: Citation `Engel2014LSD' on page 1 undefined on input li
-ne 467.
-
-
-Package natbib Warning: Citation `Forster2013SVO' on page 1 undefined on input 
-line 467.
-
-
-Package natbib Warning: Citation `Younes2016A' on page 1 undefined on input lin
-e 470.
-
-
-Package natbib Warning: Citation `Younes2016A' on page 1 undefined on input lin
-e 473.
-
-
-Package natbib Warning: Citation `Horizon DSO' on page 1 undefined on input lin
-e 473.
-
-
-Package natbib Warning: Citation `Engel2014LSD' on page 1 undefined on input li
-ne 474.
-
-
-Package natbib Warning: Citation `Houben:2015hq' on page 1 undefined on input l
-ine 493.
-
-
-Package natbib Warning: Citation `Grimmett2015Integrating' on page 1 undefined 
-on input line 493.
-
-
-Package natbib Warning: Citation `Himstedt2017Online' on page 1 undefined on in
-put line 493.
+Package natbib Warning: Author undefined for citation`Engel2017Direct' 
+(natbib)                on page 1 on input line 466.
 
 
 Package natbib Warning: Citation `zhanglin' on page 1 undefined on input line 4
 94.
 
 
-Package natbib Warning: Citation `Cadena:2016fp' on page 1 undefined on input l
-ine 503.
+Package natbib Warning: Author undefined for citation`Davison2003Real' 
+(natbib)                on page 1 on input line 505.
 
 
-Package natbib Warning: Citation `Bansal2015Analysis' on page 1 undefined on in
-put line 503.
+Package natbib Warning: Author undefined for citation`Davison2007MonoSLAM' 
+(natbib)                on page 1 on input line 505.
 
 
-Package natbib Warning: Citation `Davison2003Real' on page 1 undefined on input
- line 505.
-
-
-Package natbib Warning: Citation `Davison2007MonoSLAM' on page 1 undefined on i
-nput line 505.
-
-
-Package natbib Warning: Citation `Civera20101' on page 1 undefined on input lin
-e 505.
-
-
-Package natbib Warning: Citation `Bailey2006Simultaneous' on page 1 undefined o
-n input line 507.
-
-
-Package natbib Warning: Citation `martinez2005unscented' on page 1 undefined on
- input line 508.
-
-
-Package natbib Warning: Citation `thrun2005multi' on page 1 undefined on input 
-line 508.
-
-
-Package natbib Warning: Citation `montemerlo2007fastslam' on page 1 undefined o
-n input line 508.
-
-
-Package natbib Warning: Citation `montemerlo2002fastslam' on page 1 undefined o
-n input line 508.
+Package natbib Warning: Author undefined for citation`Civera20101' 
+(natbib)                on page 1 on input line 505.
 
 
 Package natbib Warning: Citation `Bundle Ajustment A Modern Synthesis' on page 
-1 undefined on input line 510.
-
-
-Package natbib Warning: Citation `Thrun2006The' on page 1 undefined on input li
-ne 510.
+1 undefined on input line 512.
 
 
 Package natbib Warning: Citation `why filters' on page 1 undefined on input lin
-e 511.
+e 513.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{C:/CTEX/UserData/pdftex/config/pdftex.map{Unicode.sfd}{UGBK.sfd}}
 
 
 ]
-
-Package natbib Warning: Citation `Klein2007Parallel' on page 2 undefined on inp
-ut line 521.
-
-
-Package natbib Warning: Citation `Lategahn2012City' on page 2 undefined on inpu
-t line 523.
-
-
-Package natbib Warning: Citation `Lategahn2014Vision' on page 2 undefined on in
-put line 523.
-
-
-Package natbib Warning: Citation `K2011G2o' on page 2 undefined on input line 5
-23.
-
-
-Package natbib Warning: Citation `Klein2007Parallel' on page 2 undefined on inp
-ut line 524.
-
-
-Package natbib Warning: Citation `Mur2017ORB' on page 2 undefined on input line
- 524.
-
-
-Package natbib Warning: Citation `Engel2014LSD' on page 2 undefined on input li
-ne 531.
-
-
-Package natbib Warning: Citation `Newcombe2011DTAM' on page 2 undefined on inpu
-t line 534.
-
-
-Package natbib Warning: Citation `Forster2013SVO' on page 2 undefined on input 
-line 535.
-
-
-Package natbib Warning: Citation `Cadena:2016fp' on page 2 undefined on input l
-ine 541.
-
-
-Package natbib Warning: Citation `Li2016Semi' on page 2 undefined on input line
- 541.
-
-
-Package natbib Warning: Citation `Salas2013SLAM' on page 2 undefined on input l
-ine 542.
-
-
-Package natbib Warning: Citation `Mccormac2017SemanticFusion' on page 2 undefin
-ed on input line 542.
-
-
-Package natbib Warning: Citation `Wang2015Lost' on page 2 undefined on input li
-ne 547.
-
-
-Package natbib Warning: Citation `Houben:2015hq' on page 2 undefined on input l
-ine 548.
-
-
-Package natbib Warning: Citation `Grimmett2015Integrating' on page 2 undefined 
-on input line 550.
-
-
-Package natbib Warning: Citation `Himstedt2017Online' on page 2 undefined on in
-put line 550.
+Underfull \hbox (badness 4181) in paragraph at lines 562--564
+[][]\OT1/ptm/m/n/10 YEWEI: what is con-sid-ered a ro-bust method?Max-
+ []
 
 Package epstopdf Info: Source file: <pic/fig1_overview_of_the_method.eps>
-(epstopdf)                    date: 2017-11-02 11:46:41
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 6321044 bytes
 (epstopdf)             Output file: <pic/fig1_overview_of_the_method-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2017-11-07 16:09:39
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 57415 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig1_overview_of_the_me
 thod-eps-converted-to.pdf pic/fig1_overview_of_the_method.eps>
-(epstopdf)             \includegraphics on input line 572.
+(epstopdf)             \includegraphics on input line 575.
 Package epstopdf Info: Output file is already uptodate.
 
-<pic/fig1_overview_of_the_method-eps-converted-to.pdf, id=10, 722.7pt x 298.113
-75pt>
+<pic/fig1_overview_of_the_method-eps-converted-to.pdf, id=9, 722.7pt x 298.1137
+5pt>
 File: pic/fig1_overview_of_the_method-eps-converted-to.pdf Graphic file (type p
 df)
  <use pic/fig1_overview_of_the_method-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig1_overview_of_the_method-eps-converted-to.pdf u
-sed on input line 572.
+sed on input line 575.
 (pdftex.def)             Requested size: 254.04051pt x 104.79128pt.
 
-Overfull \hbox (2.04051pt too wide) in paragraph at lines 572--573
+Overfull \hbox (2.04051pt too wide) in paragraph at lines 575--576
  [][] 
  []
 
 Package epstopdf Info: Source file: <pic/fig2_overview_of_the_method.eps>
-(epstopdf)                    date: 2017-08-01 12:13:12
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 4260318 bytes
 (epstopdf)             Output file: <pic/fig2_overview_of_the_method-eps-conver
 ted-to.pdf>
-(epstopdf)                    date: 2017-11-07 16:33:52
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 948900 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig2_overview_of_the_me
 thod-eps-converted-to.pdf pic/fig2_overview_of_the_method.eps>
-(epstopdf)             \includegraphics on input line 578.
+(epstopdf)             \includegraphics on input line 581.
 Package epstopdf Info: Output file is already uptodate.
 
-<pic/fig2_overview_of_the_method-eps-converted-to.pdf, id=11, 1128.215pt x 354.
+<pic/fig2_overview_of_the_method-eps-converted-to.pdf, id=10, 1128.215pt x 354.
 32375pt>
 File: pic/fig2_overview_of_the_method-eps-converted-to.pdf Graphic file (type p
 df)
  <use pic/fig2_overview_of_the_method-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig2_overview_of_the_method-eps-converted-to.pdf u
-sed on input line 578.
+sed on input line 581.
 (pdftex.def)             Requested size: 506.2632pt x 158.99377pt.
 
 
-Package natbib Warning: Citation `Li2017Vision' on page 2 undefined on input li
-ne 588.
+LaTeX Warning: Reference `fig:4' on page 2 undefined on input line 591.
 
 
-LaTeX Warning: Reference `fig:4' on page 2 undefined on input line 588.
+LaTeX Warning: Reference `fig of parking slots assemble' on page 2 undefined on
+ input line 597.
 
-[2 <./pic/fig1_overview_of_the_method-eps-converted-to.pdf>]
-
-Package natbib Warning: Citation `Li2017Vision' on page 3 undefined on input li
-ne 591.
-
-
-Package natbib Warning: Citation `Li2017Vision' on page 3 undefined on input li
-ne 591.
-
-
-LaTeX Warning: Reference `fig of parking slots assemble' on page 3 undefined on
- input line 593.
-
-
-Package natbib Warning: Citation `Olson2011AprilTag' on page 3 undefined on inp
-ut line 606.
-
-
-Package natbib Warning: Citation `Li2017Vision' on page 3 undefined on input li
-ne 612.
-
+[2 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig1_overview_of_the_method-eps-converted-to.pdf>]
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ú in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ù in font ptmr7t!
-
-LaTeX Warning: Reference `(' on page 3 undefined on input line 667.
-
-
-Package natbib Warning: Citation `Hong2016PVANet' on page 3 undefined on input 
-line 673.
-
-
-LaTeX Warning: Reference `(' on page 3 undefined on input line 674.
 
 
 LaTeX Warning: Reference `(' on page 3 undefined on input line 675.
 
 
-LaTeX Warning: Reference `section optimization' on page 3 undefined on input li
-ne 677.
+LaTeX Warning: Reference `(' on page 3 undefined on input line 682.
+
+
+LaTeX Warning: Reference `(' on page 3 undefined on input line 683.
 
 Package epstopdf Info: Source file: <pic/fig6_Visual_markers.eps>
-(epstopdf)                    date: 2017-11-07 16:37:37
-(epstopdf)                    size: 70263 bytes
+(epstopdf)                    date: 2017-11-14 11:44:43
+(epstopdf)                    size: 71667 bytes
 (epstopdf)             Output file: <pic/fig6_Visual_markers-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-11-07 17:30:59
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 15295 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig6_Visual_markers-eps
 -converted-to.pdf pic/fig6_Visual_markers.eps>
-(epstopdf)             \includegraphics on input line 698.
+(epstopdf)             \includegraphics on input line 706.
 Package epstopdf Info: Output file is already uptodate.
 
-<pic/fig6_Visual_markers-eps-converted-to.pdf, id=46, 202.7575pt x 165.61874pt>
+<pic/fig6_Visual_markers-eps-converted-to.pdf, id=45, 202.7575pt x 165.61874pt>
 File: pic/fig6_Visual_markers-eps-converted-to.pdf Graphic file (type pdf)
 <use pic/fig6_Visual_markers-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig6_Visual_markers-eps-converted-to.pdf used on i
-nput line 698.
+nput line 706.
 (pdftex.def)             Requested size: 202.757pt x 165.61833pt.
-
-
-Package natbib Warning: Citation `Olson2011AprilTag' on page 3 undefined on inp
-ut line 702.
-
-
-Package natbib Warning: Citation `Hartley2003Multiple' on page 3 undefined on i
-nput line 703.
-
-[3 <./pic/fig2_overview_of_the_method-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <pic/fig7_Visual_markers.eps>
-(epstopdf)                    date: 2017-08-09 07:14:57
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 507365 bytes
 (epstopdf)             Output file: <pic/fig7_Visual_markers-eps-converted-to.p
 df>
-(epstopdf)                    date: 2017-11-07 17:33:16
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 358882 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig7_Visual_markers-eps
 -converted-to.pdf pic/fig7_Visual_markers.eps>
-(epstopdf)             \includegraphics on input line 710.
+(epstopdf)             \includegraphics on input line 718.
 Package epstopdf Info: Output file is already uptodate.
 
-<pic/fig7_Visual_markers-eps-converted-to.pdf, id=78, 1735.48375pt x 792.9625pt
+<pic/fig7_Visual_markers-eps-converted-to.pdf, id=46, 1735.48375pt x 792.9625pt
 >
 File: pic/fig7_Visual_markers-eps-converted-to.pdf Graphic file (type pdf)
  <use pic/fig7_Visual_markers-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig7_Visual_markers-eps-converted-to.pdf used on i
-nput line 710.
+nput line 718.
 (pdftex.def)             Requested size: 253.05545pt x 115.63243pt.
 
-Overfull \hbox (1.05545pt too wide) in paragraph at lines 710--713
+Overfull \hbox (1.05545pt too wide) in paragraph at lines 718--721
  [][] 
  []
 
@@ -652,192 +479,169 @@ Missing character: There is no ô in font ptmr7t!
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
+[3 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig2_overview_of_the_method-eps-converted-to.pdf> <C:/Users/JohnZhao/Docu
+ments/WorkDir/JohnGitHub/Papers/semantic_vslam_parking/pic/fig6_Visual_markers-
+eps-converted-to.pdf>]
+! Undefined control sequence.
+l.734 ...hod is not accurate enough, since \COMMON
+                                                  {what...}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Reference `(' on page 4 undefined on input line 729.
 
-
-Package natbib Warning: Citation `K2011G2o' on page 4 undefined on input line 7
-46.
+LaTeX Warning: Reference `(' on page 4 undefined on input line 737.
 
 Package epstopdf Info: Source file: <pic/fig8_Optimize.eps>
-(epstopdf)                    date: 2017-10-31 23:03:37
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 70190 bytes
 (epstopdf)             Output file: <pic/fig8_Optimize-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-07 17:37:48
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 14458 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig8_Optimize-eps-conve
 rted-to.pdf pic/fig8_Optimize.eps>
-(epstopdf)             \includegraphics on input line 762.
+(epstopdf)             \includegraphics on input line 781.
 Package epstopdf Info: Output file is already uptodate.
-<pic/fig8_Optimize-eps-converted-to.pdf, id=79, 565.11125pt x 337.26pt>
+<pic/fig8_Optimize-eps-converted-to.pdf, id=84, 565.11125pt x 337.26pt>
 File: pic/fig8_Optimize-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pic/fig8_Optimize-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig8_Optimize-eps-converted-to.pdf used on input l
-ine 762.
+ine 781.
 (pdftex.def)             Requested size: 266.41287pt x 158.99377pt.
 
-Overfull \hbox (14.41287pt too wide) in paragraph at lines 762--765
+Overfull \hbox (14.41287pt too wide) in paragraph at lines 781--784
  [][] 
  []
 
-
-Package natbib Warning: Citation `K2011G2o' on page 4 undefined on input line 7
-76.
-
-[4 <./pic/fig6_Visual_markers-eps-converted-to.pdf> <./pic/fig7_Visual_markers-
-eps-converted-to.pdf> <./pic/fig8_Optimize-eps-converted-to.pdf>]
-
-Package natbib Warning: Citation `Pfingsthorn2014Representing' on page 5 undefi
-ned on input line 783.
-
-
-Package natbib Warning: Citation `K2011G2o' on page 5 undefined on input line 7
-89.
-
-
-Package natbib Warning: Citation `K2011G2o' on page 5 undefined on input line 7
-90.
-
 Missing character: There is no ‚ in font ptmr7t!
 Missing character: There is no Ä in font ptmr7t!
 Missing character: There is no ô in font ptmr7t!
 
-Package natbib Warning: Citation `Pfingsthorn2014Representing' on page 5 undefi
-ned on input line 807.
+Package natbib Warning: Citation `maxmixture' on page 4 undefined on input line
+ 838.
 
 
-Package natbib Warning: Citation `Pfingsthorn2014Representing' on page 5 undefi
-ned on input line 811.
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-
-Package natbib Warning: Citation `Pfingsthorn2014Representing' on page 5 undefi
-ned on input line 816.
+Package natbib Warning: Citation `Switchable Constrain' on page 4 undefined on 
+input line 838.
 
 
-Package natbib Warning: Citation `Latif2014Robust' on page 5 undefined on input
- line 817.
+Package natbib Warning: Citation `RRR' on page 4 undefined on input line 838.
 
+[4 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig7_Visual_markers-eps-converted-to.pdf> <C:/Users/JohnZhao/Documents/Wo
+rkDir/JohnGitHub/Papers/semantic_vslam_parking/pic/fig8_Optimize-eps-converted-
+to.pdf>]
 
-Package natbib Warning: Citation `Sunderhauf2013Switchable' on page 5 undefined
- on input line 817.
+Package natbib Warning: Citation `Switchable constraints' on page 5 undefined o
+n input line 863.
 
-
-Package natbib Warning: Citation `Cadena:2016fp' on page 5 undefined on input l
-ine 817.
-
-
-Package natbib Warning: Citation `Bailey2006Simultaneous' on page 5 undefined o
-n input line 833.
-
-
-Package natbib Warning: Citation `Bailey2006Simultaneous' on page 5 undefined o
-n input line 836.
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ú in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ù in font ptmr7t!
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ô in font ptmr7t!
-
-Underfull \hbox (badness 2452) in paragraph at lines 836--856
-\OT1/ptm/m/n/10 ]is a clas-si-cal back-end choice in SLAM field. Since
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 836--856
-
- []
-
-
-Underfull \hbox (badness 2781) in paragraph at lines 836--856
-\OML/cmm/m/it/10 x$\OT1/ptm/m/n/10 is the state ma-trix(containing real-time ca
-r pose and
- []
-
-
-Package natbib Warning: Citation `Bailey2006Simultaneous' on page 5 undefined o
-n input line 860.
-
-[5]
 Package epstopdf Info: Source file: <pic/fig9_Optimize.eps>
-(epstopdf)                    date: 2017-08-12 23:19:56
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 47383 bytes
 (epstopdf)             Output file: <pic/fig9_Optimize-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-11-07 17:59:43
+(epstopdf)                    date: 2017-11-14 11:44:43
 (epstopdf)                    size: 13695 bytes
 (epstopdf)             Command: <epstopdf --outfile=pic/fig9_Optimize-eps-conve
 rted-to.pdf pic/fig9_Optimize.eps>
-(epstopdf)             \includegraphics on input line 867.
+(epstopdf)             \includegraphics on input line 902.
 Package epstopdf Info: Output file is already uptodate.
- <pic/fig9_Optimize-eps-converted-to.pdf, id=140, 592.2125pt x 458.71375pt>
+<pic/fig9_Optimize-eps-converted-to.pdf, id=136, 592.2125pt x 458.71375pt>
 File: pic/fig9_Optimize-eps-converted-to.pdf Graphic file (type pdf)
 
 <use pic/fig9_Optimize-eps-converted-to.pdf>
 Package pdftex.def Info: pic/fig9_Optimize-eps-converted-to.pdf used on input l
-ine 867.
+ine 902.
 (pdftex.def)             Requested size: 205.26234pt x 158.99377pt.
 
 
-LaTeX Warning: Reference `??' on page 6 undefined on input line 883.
+LaTeX Warning: Reference `??' on page 5 undefined on input line 919.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 963--965
+Underfull \hbox (badness 10000) in paragraph at lines 999--1001
 
  []
 
-No file semantic_vslam_parking.bbl.
+[5 <C:/Users/JohnZhao/Documents/WorkDir/JohnGitHub/Papers/semantic_vslam_parkin
+g/pic/fig9_Optimize-eps-converted-to.pdf>]
+(C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
+emantic_vslam_parking.bbl
+! Misplaced alignment tab character &.
+<argument> IEEE Transactions on Pattern Analysis &
+                                                   Machine Intelligence
+l.26 ...n Pattern Analysis & Machine Intelligence}
+                                                  , vol.~PP, no.~99,
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ∂ in font ptmr7t!
+! Misplaced alignment tab character &.
+<argument> IEEE Transactions on Pattern Analysis &
+                                                   Machine Intelligence
+l.74   Intelligence}
+                    , vol.~29, no.~6, p. 1052, 2007.
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ì in font ptmr7t!
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no º in font ptmr7t!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ≥ in font ptmr7t!
+)
 
 Package natbib Warning: There were undefined citations.
 
-[6 <./pic/fig9_Optimize-eps-converted-to.pdf>] [7
+[7
 
-] [8]
-(./semantic_vslam_parking.aux)
+]
+(C:\Users\JohnZhao\Documents\WorkDir\JohnGitHub\Papers\semantic_vslam_parking\s
+emantic_vslam_parking.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3451 strings out of 493089
- 52599 string characters out of 6134842
- 126190 words of memory out of 5000000
- 6878 multiletter control sequences out of 15000+600000
- 43863 words of font info for 81 fonts, out of 8000000 for 9000
- 1144 hyphenation exceptions out of 8191
- 38i,10n,28p,386b,230s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
-15/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2015/texmf-dist
-/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
-pe1/urw/times/utmr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/ti
-mes/utmri8a.pfb>
-Output written on semantic_vslam_parking.pdf (8 pages, 1540960 bytes).
+ 3539 strings out of 495354
+ 53980 string characters out of 3183859
+ 120493 words of memory out of 3000000
+ 6648 multiletter control sequences out of 15000+200000
+ 43863 words of font info for 81 fonts, out of 3000000 for 9000
+ 17 hyphenation exceptions out of 8191
+ 40i,10n,28p,468b,396s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/CTEX/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmm
+i10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/CTEX/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/CTEX/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr7.pfb><C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/CTEX/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/CTEX/MiKTeX/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb><C:
+/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/CTEX/MiKTeX/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on semantic_vslam_parking.pdf (7 pages, 1557753 bytes).
 PDF statistics:
- 224 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 218 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
