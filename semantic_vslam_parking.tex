@@ -833,9 +833,13 @@ Since every parking slots may be wrongly associated or detected, it's impractica
 
 %\COMMENT{Yewei: highlight, comparing to the traditional methods, why semantic, how outliers}
 %TODO
+
 \subsubsection{Outliers elimination using Max-Mixture Model}
-As is mentioned above, classical graph optimization method using uni-model Gaussian is sensitive to outliers, and fails when there are wrongly associated datum in graphs.
-Several robust methods\citet{maxmixture} \citet{Switchable Constrain} \citet{RRR} have been proposed for pose graph, but both poses and landmark positions are to optimize in our system. 
+As mentioned above, classical graph optimization method using uni-model Gaussian is sensitive to outliers, and fails when there are wrongly associations in graphs.
+Several robust methods\citet{maxmixture} \citet{Switchable Constrain} \citet{RRR} have been proposed for the pose graph.
+In this paper, we apply multi-model Gaussian to both poses and landmark positions. 
+
+%
 
 Max-Mixture model share some similarities with slot ambiguity, so it can help fix data association problem and to some extent, implement semantic information.
 %Max-Mixture Model aims to detect loop closure errors in the “back-end” part of a pose graph. 
