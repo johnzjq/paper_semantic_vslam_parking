@@ -832,29 +832,43 @@ Since every parking slots may be wrongly associated or detected, it's impractica
 % This results in a smoother trajectory, which helps the further control task.
 
 %\COMMENT{Yewei: highlight, comparing to the traditional methods, why semantic, how outliers}
-%TODO
 
 \subsubsection{Outliers elimination using Max-Mixture Model}
 As mentioned above, classical graph optimization method using uni-model Gaussian is sensitive to outliers, and fails when there are wrongly associations in graphs.
 Several robust methods\citet{maxmixture} \citet{Switchable Constrain} \citet{RRR} have been proposed for the pose graph.
-In this paper, we apply multi-model Gaussian to both poses and landmark positions. 
+In this paper, we apply the Max-mixture model to both poses and landmark positions.
+\COMMENT{john: why the max mixture model is used? because of its simplicity?}
 
 %
 
-Max-Mixture model share some similarities with slot ambiguity, so it can help fix data association problem and to some extent, implement semantic information.
+This model describes observation ambiguities as multi-model Gaussian, thus wrongly associated data can be suppressed by other mixture elements. 
+To simplify the problem, the sum is substituted by a max operator. 
+In this paper, when an uncertain loop closure is detected, a Max-Mixture of all possible loop closure alternatives and a null hypothesis is thus added to the graph.
+
+\COMMENT{1 how to evaluate uncertainty}
+\COMMENT{2 how to detect incorrect associations}
+\COMMENT{3 how to eliminate incorrect associations}
+%several possible loop closure alternatives and a null hypothesis indicating that all the former alternatives are wrong. 
+Semantics attached to landmarks, the slot IDs, are used.... . 
+%
+
+%Max-Mixture model share some similarities with slot ambiguity, so it can help fix data association problem and to some extent, implement semantic information.
 %Max-Mixture Model aims to detect loop closure errors in the “back-end” part of a pose graph. 
 %Traditionally, all distributions in a “back-end” graph system are considered as unimodal Gaussians, thus wrongly associated datum result in great global errors. 
 %When sum-mixture model replaces unimodal Gaussian, wrongly associated data can be suppressed by other mixture elements. 
-Observation noises are described by multi-model Gaussian, thus wrongly associated data can be suppressed by other mixture elements. 
-To simplify the problem, the sum is substituted by a max operator. 
-In the pose graph situation, when an uncertain loop closure occurs, a Max-Mixture of several elements is thus added to the graph: several possible loop closure alternatives and a null hypothesis indicating that all the former alternatives are wrong. 
-In the parking map with loop closures triggered by observing a pre-visited landmark, Max-Mixture still works.
+%Observation noises are described by multi-model Gaussian, thus wrongly associated data can be suppressed by other mixture elements. 
+%To simplify the problem, the sum is substituted by a max operator. 
+%In the pose graph situation, when an uncertain loop closure occurs, a Max-Mixture of several elements is thus added to the graph: several possible loop closure alternatives and a null hypothesis indicating that all the former alternatives are wrong. 
+%In the parking map with loop closures triggered by observing a pre-visited landmark, Max-Mixture still works.
 %A null hypothesis is quite effective even with a extremely small weight.\cite{Pfingsthorn2014Representing}  
 %This method works well in pose graphs\cite{Latif2014Robust}\cite{Sunderhauf2013Switchable}\cite{Cadena:2016fp}, and we will prove its effectiveness in landmark association in the experiment section.
 
 %Since there is no wrongly associated data in IMU and tag observations, they are considered as robust edges in the graph, while the parking lot observations are always with high uncertainty, and several steps are added to guarantee the robustness. 
 %Once parking lots are detected, they are re-examined using some prior knowledge. 
 %Unusual lots(too small, too large or with abnormal length-width ratio) will thus be discarded. 
+Since the shapes of parking slots are similar to each other, we evaluate the uncertainty of loop closure based on IDs and their poses.
+
+
 Only noises of parking slots are treated as multi-model Gaussian, while in other situations, uni-model Gaussian is enough.
 After the elimination based on prior knowledge in front-end, slots are classified by the confidence level of lot ID detections. Lot observations with high confidence IDs are added to the graph as Max-Mixture edges with null hypothesis. 
 A null hypothesis is always essential due to the existence of false positive ID detection results with high confidence. 
