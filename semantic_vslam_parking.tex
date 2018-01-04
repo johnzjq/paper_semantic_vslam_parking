@@ -731,7 +731,7 @@ ${X}_{3 \times 1}$ is the coordinate in the hypothetical 3D tag coordinate and $
 %Only ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ are unknown parameters with 6 DOF, more than 3 corresponding points are needed for iteration. 
 
 %Once ${R}_{3 \times 3}$ and ${t}_{3 \times 1}$ is calculated, the Rodrigues transformation is performed on ${R}_{3 \times 3}$ to separate the angle($\alpha$) bonded by the array starts from the tag to the north and the array starts from the tag center to the vehicle. 
-In the experiment, we find ${R}_{3 \times 3}$ given by PnP method is not accurate enough, since \COMMON{what...}
+In the experiment, we find ${R}_{3 \times 3}$ given by PnP method is not accurate enough, since \COMMENT{what...}
 %cannot always meet our demands in accuracy.
 So we discard ${R}_{3 \times 3}$ and get angle directly from the calibrated image.
 As shown in(\Reffig(??)), the angle($\alpha$) can simply be calculated by $\alpha = \arctan((x_i - x_0) / f)$, where $x_i$ and $x_0$ denote the x coordinate value of the tag centre and the principle point respectively, and f is the focal length.
@@ -909,25 +909,41 @@ The connection between the vehicle at each time stamp and the landmarks.
 
 \section{Experiments}
 \COMMENT{JOHN: should firstly describe the test environment, size map lighting condition and car etc.}
-\COMMENT{How outliers detection successful?}
+
+\COMMENT{Yewei: How outliers detection successful?}
 
 In this section, we test our method both online and offline, and discuss several questions about the usage of visual markers. 
 All the parking lot datasets are collected and tested by TiEV autonomous vehicle \footnote{cs1.tongji.edu.cn/tiev} .
-\subsection{Semantic landmark detection and localization}
+We choose a parking lot, who has an area of over 3000 square meters in JiaDing Campus, Tongji University, as our test parking lot.
+Since this is an underground parking space, our system experienced harsh condition here.
+Dim lighting in the parking lot largely reduces images' quality, while too much light coming from the entry make some of the images overexposed.
+Other intruders inclued pedestrians and vehicles passing by.
 
+\subsection{Semantic landmark detection and localization}
 \COMMENT{John: models used, training workflow, training samples and detection results and statistics, short conclusion}
-\Reffig{??} show a subset of the training samples used.
+
+As previously mentioned, we detect parking slots and IDs on the calibrated images, whose resolution is $300 \times 300$ pixels. 
+The parking slot detection method proposed by \citep{Zhanglin} is used to detect slot patterns, and we train PVANet to further determine the slot ID.
+Once a slot is detected, only the image patch at the centre of slot's opening is used for ID detection.
+The image patch is rotate to avoid confusions caused by rotation.
+To train PVANet, we get 300 samples manually from 6 video streams recorded in different time of the day.
+Training samples are then enhanced, \Reffig{??} shows a subset of original samples collected at different time and and locations, and their enhanced samples.
+To test the performance of the ID detection part, we compare the ID detection results with human recognition ones.
+As shown in \Reffig{??}, due to the poor quality of calibrated images, our ID detection procedure fails or half-fails(only one in two digits is detected) in some situations.
+This calls for a robust data fusion and error detection procession in the back-end part.
+
 
 \COMMENT{John: offline should be placed before online}
 
 \subsection{Offline mapping test}
-As to the offline part, several datasets with different starting points are collected. 
+In the offline experiment, several datasets with different starting points are collected. 
 Each dataset is processed independently.
 The covariance of each edge shifts from 0.1 to 0.25 according to its confidence level.
-Fig 12 shows the map result for two of these datasets.
+\Reffig{??} shows the map result for two of these datasets.
 Map blocks with more tags have higher precision as tags are ideal landmarks who will never be wrongly associated.
-The low detection rate of parking ID also affects the mapping result, as shown in fig 13.
-
+The low detection rate of parking ID also affects the mapping result, as shown in \Reffig{??}.
+To test the effectiveness of our Max-Mixture based landmark data association method, we compared the map result with and without Max-Mixture, the result is shown in \Reffig{??}.
+In the left graph,parking slot No.38 is wrongly associated with slot No.39, and causes a global ambiguity, while in the right graph, Max-Mixture avoided this from happening by choosing a more reasonable hypothesis.
 \begin{figure*}
 \centering
 %\includegraphics[height = 1.2in]{pic/404}
@@ -943,21 +959,23 @@ toDo%有tag的建好的图，标出无tag部分，loop closure前后的图，共
 toDo%有tag的parking ID经过调整和未经过调整的图，两对，共四个
 }\label{fig:13}
 \end{figure*}
-
-In one dataset, there is a no-tag map block (marked in fig 12), where wrongly associated data always occurs.
+In one dataset, there is a no-tag map block (marked in \Reffig{}), where wrongly associated data always occurs.
 However, once a loop is detected, all landmark-positions are corrected.
-Then, duplicate landmarks are merged.
+As shown in \Reffig{}, once these wrongly associated slots are corrected, they pile up with one another, which is quite a confusion for the vehicle, and the repeated records of the same landmark is computation-consuming.
+So a nearest neighbour search is triggered once loop closure is detected, and duplicate landmarks are merged\Reffig{}.
 
 \subsection{Online real-time mapping and localization}
-During the online part, the vehicle is first operated by human to initialize the parking map. 
+During the online experiment, the vehicle is first operated by human to initialize the parking map. 
 Once the map stabilizes, a car trace is recorded.
 Then the vehicle drives automatically at the speed of 3 km/h following this pre-recorded trace and fixes its direction constantly according to real-time localization record.
 The automatic driving procedure is repeated 10 times, automatic driving traces are also recorded and compared to the pre-recorded one.
-Fig 11 shows the traces of both manual and automatic driving trace.
+\Reffig{} shows the traces of both manual and automatic driving trace.
+
 Quite a number of visual markers(60 tags) are used to cover the lot-free parts near the entrance and to guarantee a fully stable and credible localization result.
 Each tag is printed on a A2-size paper with 48.8 cm side length.
 While observing, those tags who are 20 meters or farther than the vehicle are discarded since the accuracy decreases as tags become smaller in the image.
-However, observations with dip-angle are reliable constraints as long as they are within 20 meters.
+What's more, observations with dip-angle are reliable constraints as long as they are within 20 meters.
+\Reffig{}shows the localization result of various tag-vehicle distances.
 
 \begin{figure}[htbp]
 \centering
@@ -976,6 +994,9 @@ A comparison between the human-driving and automatic driving trace%这个数据�
 \end{figure}
 
 \subsection{Comparison with ORB2-SLAM}
+To further prove the robustness of our system, we further compared it with ORB-SLAM-2.
+
+
 
 \subsection{How many tag is needed?}
 
@@ -1105,11 +1126,13 @@ very similar
 
 
 \section{Conclusion}
-The conclusion goes here.
-
-
-
-
+Due to the frequent illumination changes, parking slot is a harsh environment for most SLAM method.
+We detect the typical landmark, parking slots with IDs, in parking spaces, and build the semantic parking incrementally.
+In this procedure, semantic data association is vital.
+To associate all the semantic information robustly, a robust method for pose graph,Max-mixture, is utilized and improved.
+Experiment in parking lot shows the effectiveness of our system.
+However, we use visual markers as an aid for loop closure, which is not practical in many circumstances.
+In the future work, we aims to replace visual markers with instruction arrows or parking ids on the pillar, and improve the adaptability of our system.
 
 % if have a single appendix:
 %\appendix[Proof of the Zonklar Equations]
